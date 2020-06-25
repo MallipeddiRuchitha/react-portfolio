@@ -5,8 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   styleHeaderElement: {
-    height: "92.5vh",
-
+    height: "92.5vh",   
     backgroundImage:
       "URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)",
     backgroundPosition: "center",
@@ -24,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
 
     marginRight: "auto",
+    borderRadius:"50%",
   },
 }));
 
@@ -31,6 +31,7 @@ const HeaderMainContent = () => {
   const classes = useStyles();
   return (
     <div className={classes.styleHeaderElement}>
+      
       <Name />
       <Typography variant="subtitle1">Full Stack Developer Intern</Typography>
       <div className={classes.picture}></div>

@@ -5,11 +5,34 @@ import HomePage from "../src/pages/home-page/home-page";
 import { myTheme } from "../src/theme";
 import { ThemeProvider } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";
-const App = () => {
+import Login from "./pages/login-page/login-page";
+import ErrorPage from "./pages/error-page/error-page";
+import Callback from "./auth/callback"
+
+
+let component = "";
+
+
+const App = (props) => {
+
+  switch (window.location.pathname) {
+    case "/":
+      component = <Login {...props} />;
+      break;
+    case "/callback":
+      component = <Callback />;
+      break;
+    case "/home":
+      component = props.auth.isAuthenticated()? <HomePage {...props}/> :<ErrorPage /> ;
+      break;
+    default:
+      component = <ErrorPage />;
+  }
+  
   return (
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
-        <HomePage />
+        {component}
       </ThemeProvider>
     </BrowserRouter>
   );
