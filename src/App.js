@@ -33,6 +33,7 @@ const App = (props) => {
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
         {component}
+        {/* <HomePage></HomePage> */}
       </ThemeProvider>
     </BrowserRouter>
   );

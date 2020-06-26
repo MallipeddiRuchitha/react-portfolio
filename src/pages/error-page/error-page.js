@@ -1,14 +1,9 @@
 import React from 'react';
-
-function ErrorPage() {
+import Error from "../../components/molecules/_error/_error"
+const ErrorPage=()=> {
     
     return(
-        <div>
-            <h2>Error Page</h2>
-            <hr></hr>
-            You have to login first.
-        <a href="/"> Back to login page</a>
-        </div>
+       <Error/>
     )
 }
 export default ErrorPage;

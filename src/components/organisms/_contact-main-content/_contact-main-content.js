@@ -1,17 +1,17 @@
 import React from "react";
 
-import Name from "../../atoms/_name/_name";
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  ThemeProvider,
   Typography,
-  Button,
-  TextField,
+  FormControl,
+  // Button
 } from "@material-ui/core";
+//import RaisedButton from "material-ui/Button"
 import Input from "../../molecules/_input/_input";
 import * as Constants from "../../../constants";
+import Button from "../../molecules/_button/_button";
 const useStyles = makeStyles((theme) => ({
-  styleMainContent: {
+  styleContactMainContent: {
     height: "92.5vh",
 
     backgroundImage:
@@ -29,40 +29,46 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
 
     margin: "auto",
-    marginTop: "20px",
+    paddingTop: "30px",
+    marginTop: "30px",
     paddingLeft: "50px",
   },
   input: {
-    color: "black",
+    //color: "black",
+    paddingBottom: "10px",
   },
-  button: {
+  heading: {
     paddingTop: "50px",
   },
 }));
 
-const HeaderMainContent = () => {
+const ContactMainContent = () => {
   const classes = useStyles();
+  //const { RaisedButton, MuiThemeProvider } = MaterialUI;
+  const handleClick = () => {};
   return (
-    <div className={classes.styleMainContent}>
-      <Typography variant="subtitle2" className={classes.button}>
-        connect with me
+    <div className={classes.styleContactMainContent}>
+      <Typography variant="h3" className={classes.heading}>
+        {Constants.CONNECT}
       </Typography>
 
       <div className={classes.forms}>
-        <Input label={Constants.NAME_LABEL}></Input>
-        <Input label={Constants.EMAIL_LABEL}></Input>
-        <Input label={Constants.MESSAGE_LABEL}></Input>
+        <form>
+          <div className={classes.input}>
+            <Input label={Constants.NAME_LABEL} value=""></Input>
+          </div>
+          <div className={classes.input}>
+            <Input label={Constants.EMAIL_LABEL} value=""></Input>
+          </div>
+          <div className={classes.input}>
+            <Input label={Constants.MESSAGE_LABEL} value=""></Input>
+          </div>
 
-        <Button
-          variant="contained"
-          color="primary"
-          style={{ margin: "20px", marginLeft: "50px" }}
-        >
-          submit
-        </Button>
+          <Button value={Constants.SUBMIT} onClick={handleClick}></Button>
+        </form>
       </div>
     </div>
   );
 };
 
-export default HeaderMainContent;
+export default ContactMainContent;

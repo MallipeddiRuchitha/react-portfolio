@@ -1,8 +1,10 @@
 import React from "react";
 
-import Name from "../../atoms/_name/_name";
+
 import { makeStyles } from "@material-ui/core/styles";
-import { ThemeProvider, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
+import * as Constants from "../../../constants";
+import Image from "../../atoms/_image/_image"
 const useStyles = makeStyles((theme) => ({
   styleHeaderElement: {
     height: "92.5vh",   
@@ -11,20 +13,26 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundRepeat: "noRepeat",
     backgroundSize: "cover",
+    textAlign:"center",
+  
   },
   picture: {
-    backgroundImage:
-      "URL(https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg)",
-    backgroundSize: "cover",
-    width: "200px",
-    height: "200px",
-    marginTop: "50px",
+    // backgroundImage:
+    //   "URL(https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg)",
+    // backgroundSize: "cover",
+     //width: "200px",
+     //height: "200px",
+    // marginTop: "50px",
 
-    marginLeft: "auto",
+    // marginLeft: "auto",
 
-    marginRight: "auto",
+    // marginRight: "auto",
     borderRadius:"50%",
   },
+  name:{
+    paddingTop:"200px",
+    paddingBottom:"10px",
+  }
 }));
 
 const HeaderMainContent = () => {
@@ -32,10 +40,16 @@ const HeaderMainContent = () => {
   return (
     <div className={classes.styleHeaderElement}>
       
-      <Name />
-      <Typography variant="subtitle1">Full Stack Developer Intern</Typography>
-      <div className={classes.picture}></div>
+      
+      <Typography variant="h2" className={classes.name}>{Constants.NAME}</Typography>
+    
+  <Typography variant="h4">{Constants.DESIGNATION}</Typography>
+      {/* <div className={classes.picture}></div> */}
+
+   <div className={classes.picture}>
+    <Image image="https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg" className={classes.picture}></Image>
     </div>
+    </div> 
   );
 };
 

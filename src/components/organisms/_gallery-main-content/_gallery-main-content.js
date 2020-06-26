@@ -1,12 +1,12 @@
 import React from "react";
 
-import Name from "../../atoms/_name/_name";
+
 import { makeStyles } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/core";
+
 import Images from "../../../images.json";
 import Image from "../../atoms/_image/_image";
 const useStyles = makeStyles((theme) => ({
-  styleHeaderElement: {
+  styleGalleryMainContent: {
     height: "auto",
     minHeight: "92.5vh",
     backgroundImage:
@@ -26,10 +26,10 @@ const GalleryMainContent = () => {
 
   console.log(Images);
   const images = Images.images.map((img, key) => (
-    <Image key={img.id} image1={img} />
+    <Image key={img.id} image={img.url} />
   ));
   return (
-    <div className={classes.styleHeaderElement}>
+    <div className={classes.styleGalleryMainContent}>
       <div className={classes.styleGrid}>{images}</div>
     </div>
   );

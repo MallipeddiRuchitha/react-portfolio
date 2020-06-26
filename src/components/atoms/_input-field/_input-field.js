@@ -1,7 +1,7 @@
 import React from "react";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
+//import { findRenderedComponentWithType } from "react-dom/test-utils";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Input } from "@material-ui/core";
+import {  Input,TextField } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   styleInputFields: {
@@ -9,15 +9,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InputField = ({onChange}) => {
+const InputField = ({value,onChange}) => {
   const classes = useStyles();
 
   return (
     <div className={classes.styleInputFields}>
-      <Input 
+      <Input
+      defaultValue={value}
         inputProps={{ "aria-label": "description" }}
         style={{ color: "#000" }}
         onChange={onChange}
+        required
+       
       />
     </div>
   );

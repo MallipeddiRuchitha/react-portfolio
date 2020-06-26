@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 import { findRenderedComponentWithType } from "react-dom/test-utils";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Input, Typography, Button } from "@material-ui/core";
+import { TextField, Input, Typography } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
+import * as Constants from "../../../constants";
+import Button from "../../molecules/_button/_button";
+import Image from "../../atoms/_image/_image";
+import EditImageForm from "../../molecules/edit-image-form/_edit-image-form"
 const useStyles = makeStyles((theme) => ({
-  styleInputFields: {
-    marginRight: "20px",
+  styleImageCard: {
+   // marginRight: "20px",
     backgroundColor: "white",
     marginBottom: "20px",
-    width: "48.5%",
-    marginTop: "20px",
+    //width: "48.6%",
+    width:"57%",
+    marginTop: "10px",
     marginLeft: "auto",
     marginRight: "auto",
   },
   picture: {
-    backgroundSize: "cover",
-    width: "300px",
-    height: "300px",
+    // backgroundSize: "cover",
+    // width: "300px",
+    // height: "300px",
+    marginTop:"-48px",
   },
   name: {
     textAlign: "center",
@@ -29,9 +35,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "5%",
     marginLeft: "40%",
   },
+  icons:{
+    display:'flex',
+    //justifyContent:"center",
+   // paddingRight:"20px",
+   paddingLeft:"9%",
+  }
 }));
 
-const Image = ({ image1, handleDelete, handleEdit }) => {
+const ImageCard = ({ image1, handleDelete, handleEdit }) => {
   const classes = useStyles();
   const [edit, setEdit] = useState(false);
   const [name, setName] = useState(image1.name);
@@ -48,14 +60,16 @@ const Image = ({ image1, handleDelete, handleEdit }) => {
     setEdit(false);
     return handleEdit(image1.id, name);
   };
-  if (!edit) {
+  
     return (
-      <div className={classes.styleInputFields}>
-        <div
-          className={classes.picture}
-          style={{ backgroundImage: "URL(" + image1.url + ")" }}
-        ></div>
-        <Typography className={classes.name}>{image1.name}</Typography>
+      <div className={classes.styleImageCard}>
+       <div className={classes.picture}><Image image={image1.url}></Image></div>
+       {!edit&&(
+         <Typography className={classes.name}>{image1.name}</Typography>
+       )}
+        
+        {edit&&(<EditImageForm  name={name} handleChangeInName={handleChangeInName} handleSubmit={handleSubmit}  ></EditImageForm>)}
+        <div className={classes.icons}>
         <EditIcon
           className={classes.edit}
           style={{ cursor: "pointer" }}
@@ -68,40 +82,30 @@ const Image = ({ image1, handleDelete, handleEdit }) => {
           }}
         ></DeleteIcon>
       </div>
+      </div>
     );
-  } else {
-    return (
-      <div className={classes.styleInputFields}>
-        <div
-          className={classes.picture}
-          style={{ backgroundImage: "URL(" + image1.url + ")" }}
-        ></div>
+//   } else {
+//     return (
+//       <div className={classes.styleImageCard}>
+        
+//         <Image image={image1.url}></Image>
 
-        <form>
-          <Input
-            defaultValue={name}
-            className={classes.name}
-            style={{ color: "#000" }}
-            onChange={handleChangeInName}
-          ></Input>
-          <Button onClick={handleSubmit} variant="contained" color="primary">
-            save
-          </Button>
-        </form>
-        <EditIcon
-          className={classes.edit}
-          style={{ cursor: "pointer" }}
-          onClick={handleClick}
-        ></EditIcon>
-        <DeleteIcon
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            handleDelete(image1.id);
-          }}
-        ></DeleteIcon>
-      </div>
-    );
-  }
+        
+// <EditImageForm  name={name} handleChangeInName={handleChangeInName} handleSubmit={handleSubmit}  ></EditImageForm>
+//         <EditIcon
+//           className={classes.edit}
+//           style={{ cursor: "pointer" }}
+//           onClick={handleClick}
+//         ></EditIcon>
+//         <DeleteIcon
+//           style={{ cursor: "pointer" }}
+//           onClick={() => {
+//             handleDelete(image1.id);
+//           }}
+//         ></DeleteIcon>
+//       </div>
+//     );
+//   }
 };
 
-export default Image;
+export default ImageCard;

@@ -57,14 +57,7 @@ export const myTheme = createMuiTheme({
   typography: {
      
     
-    h3: {
-      fontSize: "18px",
-      textAlign: "center",
-      color: "#fff",
-      fontStyle: "bold",
-      fontFamily: "poppins",
-      fontWeight:"10px",
-    },
+    
     h2: {
         fontSize: "40px",
         textAlign: "center",
@@ -74,7 +67,23 @@ export const myTheme = createMuiTheme({
         //fontWeight:"70px",
         //fontWeight:"800px",
       },
-      h4: {
+      h3: {
+        fontSize: "30px",
+        textAlign: "center",
+        color: "#fff",
+        fontStyle: "bold",
+        fontFamily: "poppins",
+        fontWeight:"10px",
+      },
+   h4:{
+    fontSize: "25px",
+    textAlign: "center",
+    color: "#fff",
+    fontStyle: "bold",
+    fontFamily: "poppins",
+    fontWeight:"10px",
+   },
+      h5: {
         fontSize: "19px",
         textAlign: "left",
         color: "#000",
@@ -82,21 +91,28 @@ export const myTheme = createMuiTheme({
         fontFamily: "poppins",
         //fontWeight:"10px",
       },
-   subtitle1:{
-    fontSize: "30px",
+  //  subtitle1:{
+  //   fontSize: "30px",
+  //   textAlign: "center",
+  //   color: "#fff",
+  //   fontStyle: "bold",
+  //   fontFamily: "poppins",
+  //  },
+  //  subtitle2:{
+  //   fontSize: "30px",
+  //   textAlign: "center",
+  //   color: "#000",
+  //   fontStyle: "bold",
+  //   fontFamily: "poppins",
+  //  }
+  button:{
+    fontSize: "13px",
     textAlign: "center",
     color: "#fff",
     fontStyle: "bold",
     fontFamily: "poppins",
+    fontWeight:"10px",
    },
-   subtitle2:{
-    fontSize: "30px",
-    textAlign: "center",
-    color: "#000",
-    fontStyle: "bold",
-    fontFamily: "poppins",
-   }
-
   },
 });
 

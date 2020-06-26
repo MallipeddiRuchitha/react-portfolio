@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import HeaderElement from "../../atoms/_header-element/_header-element";
-import { Button } from "@material-ui/core";
+//import { Button } from "@material-ui/core";
 import * as Constants from "../../../constants";
 import { Link } from "react-router-dom";
 import { myTheme } from "../../../theme";
 import Auth from "../../../auth/Auth";
+import Button from "../../molecules/_button/_button"
 
 const useStyles = makeStyles((theme) => ({
   styleHeader: {
@@ -20,9 +21,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: myTheme.palette.primary.main,
 
   },
-  styleLink: {
-    textTransform: "none",
+  link: {
+    textDecoration: "none",
   },
+  button:{
+    paddingLeft:"100px",
+    paddingTop:"20px",
+  }
 }));
 
 const Header = () => {
@@ -31,7 +36,7 @@ const Header = () => {
   return (
     <>
       <div className={classes.styleHeader}>
-        <Link to="/home" className={classes.styleLink}>
+        <Link to="/home" className={classes.link}>
           <HeaderElement text={Constants.HOME}></HeaderElement>
         </Link>
 
@@ -47,7 +52,9 @@ const Header = () => {
         <Link to="/gallery-admin" className={classes.link}>
           <HeaderElement text={Constants.GALLERY_ADMIN}></HeaderElement>
         </Link>
-        <Button onClick={auth.logout}>logout</Button>
+        <div className={classes.button}>
+        <Button onClick={auth.logout} value={Constants.LOGOUT} ></Button>
+        </div>
       </div>
     </>
   );

@@ -1,55 +1,48 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-import { Button,Typography} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
+import * as Constants from "../../../constants";
+import Button from "../../molecules/_button/_button"
 const useStyles = makeStyles((theme) => ({
-    styleMainContent: {
-      height: "92.5vh",
-  
-      backgroundImage:
-        "URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)",
-  
-      backgroundRepeat: "noRepeat",
-      backgroundSize: "cover",
-    },
-    login:{
-        height: "92.5vh",
-        backgroundImage:
-        "URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)",
-    },
+  styleLogin:{
+    height: "92.5vh",
+    backgroundImage:
+    "URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)",
+
+  },
+   
     forms: {
       //border: "1px solid white",
     //   height: "300PX",
     //   width: "250px",
     //   backgroundColor: "white",
-    height: "92.5vh",
-    backgroundImage:
-    "URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)",
+   
       color: "black",
   
       //margin: "auto auto",
-       paddingTop: "10%",
-       paddingLeft:"50%",
+       paddingTop: "2%",
+       paddingLeft:"48%",
+       paddingRight:"50%",
       //paddingLeft: "50px",
     },
     input: {
-      color: "black",
+      paddingTop:"10%",
     },
-    button: {
-      paddingTop: "50px",
-    },
+    
   }));
 
 const  Login=(props)=> {
     const classes = useStyles();
     return(
+      
+      <div className={classes.styleLogin}>
         
-        <div className={classes.forms}>
-            
-            <Typography>Login Page</Typography>
-            <Button onClick={props.auth.login} variant="contained" color="primary">Login</Button>
+         <Typography variant="h2" className={classes.input}>{Constants.LOGIN_PAGE}</Typography>   
+         <div className={classes.forms}>
+    <Button onClick={props.auth.login} value={Constants.LOGIN}></Button>
+        
            
-             
-        
+    </div>
         </div>
     )
 }

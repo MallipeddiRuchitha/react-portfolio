@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-import Name from "../../atoms/_name/_name";
 import { makeStyles } from "@material-ui/core/styles";
-import { ThemeProvider, Button,Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Images from "../../../images.json";
 import ImageCard from "../_image-card/_image-card";
 import Input from "../../molecules/_input/_input";
 import * as Constants from "../../../constants";
-import Button1 from "../../atoms/_button/_button"
+import Button from "../../molecules/_button/_button";
+import AddImageForm from "../../molecules/_add-image-form/_add-image-form";
 const useStyles = makeStyles((theme) => ({
-  styleHeaderElement: {
+  styleGalleryAdminMainContent: {
     height: "auto",
     minHeight: "92.5vh",
     backgroundImage:
@@ -34,26 +34,20 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "20px",
     paddingLeft: "50px",
   },
-  button:{
+  button: {
     //  marginTop:'5px',
     //   alignItems:'center',
     paddingTop: "50px",
+    paddingLeft: "30%",
+    paddingBottom: "20px",
   },
-  button1:{
-    margin: "20px", marginLeft: "50px"
-  }
+  button1: {
+    margin: "20px",
+    marginLeft: "50px",
+  },
 }));
-const handleCheckboxCheck = () => {
-  console.log("2");
-  fetch("../../../images.json")
-    .then((response) => {
-      console.log("1", response.data.images);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
-const HeaderMainContent = () => {
+
+const GalleryAdminMainContent = () => {
   const [images, setImages] = useState([...Images.images]);
   const [isAdd, setIsAdd] = useState(false);
   const [imageName, setImageName] = useState("");
@@ -111,41 +105,28 @@ const HeaderMainContent = () => {
     />
   ));
 
-  if (!isAdd) {
-    return (
-      <div className={classes.styleHeaderElement}>
-        <Button onClick={handleAdd} variant="contained" color="primary" style={{ margin: "20px 50%" }}>
-          Add
-        </Button>
-        <div className={classes.styleGrid}>{imges}</div>
-      </div>
-    );
-  } else {
-    return (
-      <div className={classes.styleHeaderElement}>
-           <Typography variant="subtitle2" className={classes.button}>
-        Add Image
-      </Typography>
-
-        <form className={classes.forms}>
-          <Input
-            label={Constants.NAME_LABEL}
-            onChange={handleNameChange}
-          ></Input>
-          <Input label={Constants.URL_LABEL} onChange={handleURLChange}></Input>
-         
-          {/* <Button onClick={handleAddClick} variant="contained" color="primary"  style={{ margin: "20px 30%"}}>
-            Add
-          </Button> */}
-          <Button1 onClick={handleAddClick} value="Add" style={{ margin: "20px 50%" }} /> 
-            
-          
-         
-        </form>
-      </div>
-    );
-  }
-  
+  return (
+    <div className={classes.styleGalleryAdminMainContent}>
+      {!isAdd && (
+        <>
+          {" "}
+          <div className={classes.button}>
+            <Button onClick={handleAdd} value={Constants.ADD}></Button>
+          </div>
+          <div className={classes.styleGrid}>{imges}</div>
+        </>
+      )}
+      {isAdd && (
+        <>
+          <AddImageForm
+            handleNameChange={handleNameChange}
+            handleURLChange={handleURLChange}
+            handleAddClick={handleAddClick}
+          ></AddImageForm>
+        </>
+      )}
+    </div>
+  );
 };
 
-export default HeaderMainContent;
+export default GalleryAdminMainContent;

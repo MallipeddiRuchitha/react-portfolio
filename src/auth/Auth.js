@@ -12,10 +12,9 @@ export default class Auth {
     audience: "https://dev-1ffztey5.auth0.com/userinfo",
     responseType: "token id_token",
     scope: "openid profile",
-  }); 
+  });
   constructor() {
     this.login = this.login.bind(this);
- 
   }
 
   login() {

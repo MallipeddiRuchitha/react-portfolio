@@ -1,10 +1,10 @@
 import React from "react";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
+//import { findRenderedComponentWithType } from "react-dom/test-utils";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Input } from "@material-ui/core";
+//import { TextField, Input } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  styleInputFields: {
+  styleImage: {
     marginRight: "20px",
   },
   picture: {
@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Image = ({image1}) => {
+const Image = ({image}) => {
   const classes = useStyles();
      
   return (
-    <div className={classes.styleInputFields}>
+    <div className={classes.styleImage}>
       {/* <Input
         inputProps={{ "aria-label": "description" }}
         style={{ color: "#000" }}
       /> */}
-      <div className={classes.picture} style={{backgroundImage:"URL("+image1.url+")"}}></div>
+      <div className={classes.picture} style={{backgroundImage:"URL("+image+")"}}></div>
     </div>
 
   );
