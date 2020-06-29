@@ -5,24 +5,15 @@ import * as Constants from "../../../constants";
 import Input from "../../molecules/_input/_input";
 import Button from "../../molecules/_button/_button";
 import { Typography } from "@material-ui/core";
+import { myTheme } from "../../../theme";
 const useStyles = makeStyles((theme) => ({
   form: {
-    // border: "1px solid white",
-    // height: "300PX",
-    // width: "250px",
-    // backgroundColor: "white",
-
-    // color: "black",
-
-    // margin: "auto",
-    // paddingTop: "20px",
-    // paddingLeft: "50px",
-    border: "1px solid white",
+    
     height: "300PX",
     width: "250px",
-    backgroundColor: "white",
+    backgroundColor: myTheme.palette.secondary.main,
 
-    color: "black",
+    color: myTheme.palette.myColor.blackColor,
 
     margin: "auto",
     paddingTop: "30px",
@@ -30,11 +21,14 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "50px",
   },
   input: {
-    //color: "black",
-    paddingBottom: "20px",
+      paddingBottom: "20px",
   },
   heading: {
     paddingTop: "50px",
+  },
+  error: {
+    color:myTheme.palette.myColor.redColor ,
+    
   },
 }));
 
@@ -42,10 +36,13 @@ const AddImageForm = ({
   handleNameChange,
   handleURLChange,
   handleAddClick,
+  nameError,
+  error,
+  urlError,
 }) => {
   const classes = useStyles();
   return (
-    <div>
+    <div data-testid="addImageForm">
       <Typography variant="h3" className={classes.heading}>
         {Constants.ADD_IMAGE}
       </Typography>
@@ -56,6 +53,9 @@ const AddImageForm = ({
             onChange={handleNameChange}
             value=""
           ></Input>
+           <Typography className={classes.error}>
+            {nameError !== "" && nameError}
+          </Typography>
         </div>
         <div className={classes.input}>
           <Input
@@ -63,12 +63,17 @@ const AddImageForm = ({
             onChange={handleURLChange}
             value=""
           ></Input>
+ <Typography className={classes.error}>
+            {urlError !== "" && urlError}
+          </Typography>
         </div>
 
         <Button
           onClick={handleAddClick}
           value={Constants.ADD}
-          style={{ margin: "20px 50%" }}
+          style={{ margin: "20px 50%" }
+        }
+        disabled={error ? true : false}
         />
       </form>
     </div>

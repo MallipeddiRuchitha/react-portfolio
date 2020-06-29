@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderElement component Matches the snapshot 1`] = `
+<h4
+  className="MuiTypography-root makeStyles-styleHeaderElement-1 MuiTypography-h4"
+  data-testid="headerElement"
+/>
+`;

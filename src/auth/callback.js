@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Auth from "./Auth";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import * as Constants from "../constants"
 const useStyles = makeStyles((theme) => ({
   styleMainContent: {
     height: "92.5vh",
@@ -24,7 +25,7 @@ const Callback = () => {
   const classes = useStyles();
   return (
     <div className={classes.styleMainContent}>
-      <Typography>Loading</Typography>
+      <Typography>{Constants.LOADING}</Typography>
     </div>
   );
 };

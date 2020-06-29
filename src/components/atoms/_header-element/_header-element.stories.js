@@ -11,7 +11,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => {
+export const headerElement = () => {
   const text1 = text("text", "home");
   return (
     <ThemeProvider theme={myTheme}>
@@ -19,3 +19,4 @@ export const normal = () => {
     </ThemeProvider>
   );
 };
+

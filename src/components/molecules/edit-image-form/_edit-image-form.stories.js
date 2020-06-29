@@ -10,12 +10,13 @@ export default {
   title: "EditImageForm",
    decorators: [withKnobs],
 };
-export const normal = () => {
+export const editImageForm = () => {
   const name = text("name", "image1");
+  const nameError=text("nameError","");
   return (
      
     <ThemeProvider theme={myTheme}>      
-      <EditImageForm  name ={name} handleChangeInName={action()} handleSubmit ={action()}/>
+      <EditImageForm  name ={name} handleChangeInName={action()} handleSubmit ={action()} nameError={nameError}/>
     </ThemeProvider>
   );
 };

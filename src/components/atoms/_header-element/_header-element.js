@@ -19,7 +19,11 @@ const HeaderElement = ({ text }) => {
   const classes = useStyles();
   console.log(text);
   return (
-    <Typography variant="h4" className={classes.styleHeaderElement}>
+    <Typography
+      variant="h4"
+      className={classes.styleHeaderElement}
+      data-testid="headerElement"
+    >
       {text}
     </Typography>
   );

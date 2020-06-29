@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditImageForm component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleContactMainContent-1"
+  data-testid="contact"
+>
+  <h3
+    className="MuiTypography-root makeStyles-heading-4 MuiTypography-h3"
+  >
+    connect with me
+  </h3>
+  <div
+    className="makeStyles-forms-2"
+  >
+    <form>
+      <div
+        className="makeStyles-input-3"
+      >
+        <div
+          data-testid="input"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            Name
+          </h5>
+          <div
+            className="makeStyles-styleInputFields-6"
+            data-testid="inputField"
+          >
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              onClick={[Function]}
+              required={true}
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            >
+              <input
+                className="MuiInputBase-input MuiInput-input"
+                data-testid="content-input"
+                defaultValue=""
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={true}
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+      />
+      <div
+        className="makeStyles-input-3"
+      >
+        <div
+          data-testid="input"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            Email
+          </h5>
+          <div
+            className="makeStyles-styleInputFields-6"
+            data-testid="inputField"
+          >
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              onClick={[Function]}
+              required={true}
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            >
+              <input
+                className="MuiInputBase-input MuiInput-input"
+                data-testid="content-input"
+                defaultValue=""
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={true}
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+      />
+      <div
+        className="makeStyles-input-3"
+      >
+        <div
+          data-testid="input"
+        >
+          <h5
+            className="MuiTypography-root MuiTypography-h5"
+          >
+            Message
+          </h5>
+          <div
+            className="makeStyles-styleInputFields-6"
+            data-testid="inputField"
+          >
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              onClick={[Function]}
+              required={true}
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            >
+              <input
+                className="MuiInputBase-input MuiInput-input"
+                data-testid="content-input"
+                defaultValue=""
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={true}
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+      />
+      <div
+        className="makeStyles-button-7"
+        data-testid="button"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-button"
+            >
+               
+              submit
+            </span>
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

@@ -8,6 +8,7 @@ import Input from "../../molecules/_input/_input";
 import * as Constants from "../../../constants";
 import Button from "../../molecules/_button/_button";
 import AddImageForm from "../../molecules/_add-image-form/_add-image-form";
+import { myTheme } from "../../../theme";
 const useStyles = makeStyles((theme) => ({
   styleGalleryAdminMainContent: {
     height: "auto",
@@ -23,20 +24,19 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateColumns: "1fr 1fr 1fr",
   },
   forms: {
-    border: "1px solid white",
+    border: "1px solid myTheme.palette.secondary.main",
     height: "300PX",
     width: "250px",
-    backgroundColor: "white",
+    backgroundColor: "myTheme.palette.secondary.main",
 
-    color: "black",
+    color: "myTheme.palette.myColor.blackColor",
 
     margin: "auto",
     paddingTop: "20px",
     paddingLeft: "50px",
   },
   button: {
-    //  marginTop:'5px',
-    //   alignItems:'center',
+    
     paddingTop: "50px",
     paddingLeft: "30%",
     paddingBottom: "20px",
@@ -53,7 +53,10 @@ const GalleryAdminMainContent = () => {
   const [imageName, setImageName] = useState("");
   const [imageURL, setImageURL] = useState("");
   const classes = useStyles();
-
+  const [nameError, setNameError] = useState("");
+ 
+  const [urlError, setUrlError] = useState("");
+  const [error, setError] = useState(true);
   const handleEdit = (index, name) => {
     console.log("edit", name);
     let tempImgArr = [...images];
@@ -71,11 +74,51 @@ const GalleryAdminMainContent = () => {
   };
   const handleNameChange = (event) => {
     event.preventDefault();
-    setImageName(event.target.value);
+   
+    const name=event.target.value;
+    setImageName(name);
+    var namePattern = /^[a-zA-Z]+/;
+    if (name === "" || name === null){
+      setNameError(Constants.INVALID_NAME);
+      setError(true);
+      
+    } 
+     else if (!namePattern.test(name)){
+      setNameError(Constants.INVALID_NAME);
+      setError(true);
+
+    }
+    else 
+    {
+      setNameError("");
+      if(nameError===""&&urlError===""&&imageURL.length>0)
+      setError(false);
+
+  }
   };
   const handleURLChange = (event) => {
     event.preventDefault();
-    setImageURL(event.target.value);
+   
+    const url=event.target.value;
+    setImageURL(url);
+    var urlPattern = /^[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?$/;
+    if (url === "" || url === null){
+      setUrlError(Constants.INVALID_URL);
+      setError(true);
+      
+    } 
+     else if (!urlPattern.test(url)){
+      setUrlError(Constants.INVALID_URL);
+      setError(true);
+
+    }
+    else 
+    {
+      setUrlError("");
+      if(nameError===""&&urlError===""&&imageName.length>0)
+      setError(false);
+
+  }
   };
   const handleAdd = (url, name) => {
     setIsAdd(!isAdd);
@@ -106,10 +149,9 @@ const GalleryAdminMainContent = () => {
   ));
 
   return (
-    <div className={classes.styleGalleryAdminMainContent}>
+    <div className={classes.styleGalleryAdminMainContent} data-testid="galleryAdmin">
       {!isAdd && (
-        <>
-          {" "}
+        <>        
           <div className={classes.button}>
             <Button onClick={handleAdd} value={Constants.ADD}></Button>
           </div>
@@ -122,6 +164,9 @@ const GalleryAdminMainContent = () => {
             handleNameChange={handleNameChange}
             handleURLChange={handleURLChange}
             handleAddClick={handleAddClick}
+            nameError={nameError}
+  error={error}
+  urlError={urlError}
           ></AddImageForm>
         </>
       )}

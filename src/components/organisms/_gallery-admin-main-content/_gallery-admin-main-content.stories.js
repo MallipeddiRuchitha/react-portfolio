@@ -10,7 +10,7 @@ export default {
   title: "GalleryAdmin",
    decorators: [withKnobs],
 };
-export const normal = () => {
+export const galleryAdmin = () => {
   return (
     <ThemeProvider theme={myTheme}>      
       <GalleryAdmin  />

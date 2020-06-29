@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleInputFields-1"
+  data-testid="inputField"
+>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline"
+    onClick={[Function]}
+    required={true}
+    style={
+      Object {
+        "color": "#000",
+      }
+    }
+  >
+    <input
+      className="MuiInputBase-input MuiInput-input"
+      data-testid="content-input"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={true}
+      type="text"
+    />
+  </div>
+</div>
+`;

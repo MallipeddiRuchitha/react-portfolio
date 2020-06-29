@@ -38,4 +38,8 @@ export const ERROR_PAGE="Error Page";
 export const LOGIN_FIRST="You have to login first";
 export const BACK_TO_LOGIN_PAGE="Back to login page";
 export const LOGIN_PAGE="LoginPage";
-
+export const INVALID_NAME="invalid name";
+export const INVALID_EMAIL="invalid email";
+export const INVALID_MESSAGE="invalid message";
+export const INVALID_URL="invalid url";
+export const LOADING="Loding";

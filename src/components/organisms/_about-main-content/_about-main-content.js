@@ -3,20 +3,21 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider, Typography } from "@material-ui/core";
 import * as Constants from "../../../constants";
+import { myTheme } from "../../../theme";
+import About from "../../molecules/_about-card/_about-card";
 const useStyles = makeStyles((theme) => ({
   aboutMainContent: {
     height: "1000PX",
-    //marginTop:'400px',
-    //backgroundImage: 'URL(https://www.xmple.com/wallpaper/gradient-cyan-purple-linear-2736x1824-c2-0bfce2-ee82ee-a-105-f-14.svg)',
+    
     backgroundPosition: "center",
     backgroundRepeat: "noRepeat",
     backgroundSize: "cover",
   },
   about: {
-    color: "black",
-    //alignItems:"center",
+    color: myTheme.palette.myColor.blackColor,
+
     paddingTop: "40px",
-    //display:"flex",
+
     paddingLeft: "250px",
     paddingRight: "250px",
     fontSize: "25px",
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "0px",
     height: "270px",
     width: "400px",
-    border: "1px solid black",
+    border: "1px solid " + myTheme.palette.myColor.blackColor,
     margin: "70px",
     textAlign: "center",
   },
@@ -34,50 +35,41 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   heading: {
-    backgroundColor: "#000",
+    backgroundColor: myTheme.palette.myColor.blackColor,
+    color: myTheme.palette.secondary.main,
+    marginBottom: "10px",
   },
 }));
 
 const AboutMainContent = () => {
   const classes = useStyles();
+  const technicalSkills = [
+    Constants.JAVA,
+    Constants.DBMS,
+    Constants.REACT,
+    Constants.SPRING,
+    Constants.SPRING_BOOT,
+    Constants.REST,
+    Constants.NETWORKING,
+    Constants.LINUX,
+    Constants.HTML_CSS,
+  ];
+  const projects = [
+    Constants.DETECTION_PREDICTION_CLOUDS,
+    Constants.GATE_PASS_MANAGEMENT_SYSTEM,
+    Constants.MAKING_DATA_BASED_DESCIONS_USING_GOOGLE_ANALYTICS,
+    Constants.ONLINE_DOCTOR_APPOINTMENT,
+    Constants.SPRING_BOOT_REST_API_MOVIES,
+    Constants.COURSES_PROJECT,
+  ];
   return (
-    <div className={classes.aboutMainContent}>
+    <div className={classes.aboutMainContent} data-testid="aboutMainContent">
       <Typography variant="subtitle2" className={classes.about}>
         {Constants.ABOUT_ME}
-        {/* I am Ruchitha from Keshav Memorial Institute of Technology.I'm passionate about coding and learning new technologies.In free time I like to chill at home watching movies and colouring .I love to be surrounded by positive and motivating people.  */}
       </Typography>
       <div className={classes.list}>
-        <div className={classes.skills}>
-          <Typography variant="subtitle1" className={classes.heading}>
-            {" "}
-            {Constants.TECHNICAL_SKILLS}
-          </Typography>
-          <Typography>{Constants.JAVA}</Typography>
-          <Typography>{Constants.DBMS}</Typography>
-          <Typography>{Constants.REACT}</Typography>
-          <Typography>{Constants.SPRING}</Typography>
-          <Typography> {Constants.SPRING_BOOT}</Typography>
-          <Typography>{Constants.REST}</Typography>
-          <Typography> {Constants.NETWORKING}</Typography>
-          <Typography>{Constants.LINUX}</Typography>
-          <Typography>{Constants.HTML_CSS}</Typography>
-        </div>
-        <div className={classes.skills}>
-          <Typography variant="subtitle1" className={classes.heading}>
-            {Constants.PROJECTS}
-          </Typography>
-          <Typography>{Constants.DETECTION_PREDICTION_CLOUDS}</Typography>
-          <Typography>{Constants.GATE_PASS_MANAGEMENT_SYSTEM}</Typography>
-          <Typography>
-            {Constants.MAKING_DATA_BASED_DESCIONS_USING_GOOGLE_ANALYTICS}
-          </Typography>
-
-          <Typography>{Constants.ONLINE_DOCTOR_APPOINTMENT}</Typography>
-
-          <Typography>{Constants.SPRING_BOOT_REST_API_MOVIES}</Typography>
-
-          <Typography> {Constants.COURSES_PROJECT}</Typography>
-        </div>
+        <About array={technicalSkills} heading={Constants.TECHNICAL_SKILLS} />
+        <About array={projects} heading={Constants.PROJECTS} />
       </div>
     </div>
   );

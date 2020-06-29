@@ -8,23 +8,19 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import * as Constants from "../../../constants";
 import Button from "../../molecules/_button/_button";
 import Image from "../../atoms/_image/_image";
-import EditImageForm from "../../molecules/edit-image-form/_edit-image-form"
+import EditImageForm from "../../molecules/edit-image-form/_edit-image-form";
+import { myTheme } from "../../../theme";
 const useStyles = makeStyles((theme) => ({
   styleImageCard: {
-   // marginRight: "20px",
-    backgroundColor: "white",
+    backgroundColor: myTheme.palette.secondary.main,
     marginBottom: "20px",
-    //width: "48.6%",
-    width:"57%",
+    width: "fitContent",
     marginTop: "10px",
     marginLeft: "auto",
     marginRight: "auto",
   },
   picture: {
-    // backgroundSize: "cover",
-    // width: "300px",
-    // height: "300px",
-    marginTop:"-48px",
+    marginTop: "-48px",
   },
   name: {
     textAlign: "center",
@@ -35,24 +31,35 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "5%",
     marginLeft: "40%",
   },
-  icons:{
-    display:'flex',
-    //justifyContent:"center",
-   // paddingRight:"20px",
-   paddingLeft:"9%",
-  }
+  icons: {
+    display: "flex",
+    //paddingLeft: "9%",
+  },
 }));
 
 const ImageCard = ({ image1, handleDelete, handleEdit }) => {
   const classes = useStyles();
   const [edit, setEdit] = useState(false);
   const [name, setName] = useState(image1.name);
+  const[nameError,setNameError]=useState("");
   const handleClick = () => {
     setEdit(true);
   };
   const handleChangeInName = (event) => {
     event.preventDefault();
-    setName(event.target.value);
+    // setName(event.target.value);
+    const name=event.target.value;
+    setName(name);
+    var namePattern = /^[a-zA-Z]+/;
+    if ((name === "" || name === null||!namePattern.test(name))){
+      setNameError(Constants.INVALID_NAME);
+      
+      
+    } 
+     else { setNameError("");
+      
+    }
+   
   };
 
   const handleSubmit = (event) => {
@@ -60,52 +67,38 @@ const ImageCard = ({ image1, handleDelete, handleEdit }) => {
     setEdit(false);
     return handleEdit(image1.id, name);
   };
-  
-    return (
-      <div className={classes.styleImageCard}>
-       <div className={classes.picture}><Image image={image1.url}></Image></div>
-       {!edit&&(
-         <Typography className={classes.name}>{image1.name}</Typography>
-       )}
-        
-        {edit&&(<EditImageForm  name={name} handleChangeInName={handleChangeInName} handleSubmit={handleSubmit}  ></EditImageForm>)}
-        <div className={classes.icons}>
-        <EditIcon
+
+  return (
+    <div className={classes.styleImageCard} data-testid="imageCard">
+      <div className={classes.picture}>
+        <Image image={image1.url}></Image>
+      </div>
+      {!edit && <Typography className={classes.name}>{image1.name}</Typography>}
+
+      {edit && (
+        <EditImageForm
+          name={name}
+          handleChangeInName={handleChangeInName}
+          handleSubmit={handleSubmit}
+          nameError={nameError}
+        ></EditImageForm>
+      )}
+      <div className={classes.icons}>
+        <EditIcon data-testid="editIcon"
           className={classes.edit}
           style={{ cursor: "pointer" }}
           onClick={handleClick}
         ></EditIcon>
         <DeleteIcon
+        data-testid="deleteIcon"
           style={{ cursor: "pointer" }}
           onClick={() => {
             handleDelete(image1.id);
           }}
         ></DeleteIcon>
       </div>
-      </div>
-    );
-//   } else {
-//     return (
-//       <div className={classes.styleImageCard}>
-        
-//         <Image image={image1.url}></Image>
-
-        
-// <EditImageForm  name={name} handleChangeInName={handleChangeInName} handleSubmit={handleSubmit}  ></EditImageForm>
-//         <EditIcon
-//           className={classes.edit}
-//           style={{ cursor: "pointer" }}
-//           onClick={handleClick}
-//         ></EditIcon>
-//         <DeleteIcon
-//           style={{ cursor: "pointer" }}
-//           onClick={() => {
-//             handleDelete(image1.id);
-//           }}
-//         ></DeleteIcon>
-//       </div>
-//     );
-//   }
+    </div>
+  );
 };
 
 export default ImageCard;

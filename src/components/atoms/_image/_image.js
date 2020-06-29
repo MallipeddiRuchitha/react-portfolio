@@ -1,39 +1,31 @@
 import React from "react";
-//import { findRenderedComponentWithType } from "react-dom/test-utils";
+
 import { makeStyles } from "@material-ui/core/styles";
-//import { TextField, Input } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   styleImage: {
-    marginRight: "20px",
+    // marginRight: "20px",
   },
   picture: {
-    //backgroundImage:
-      //"URL(https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg)",
     backgroundSize: "cover",
     width: "300px",
     height: "300px",
     marginTop: "50px",
-
     marginLeft: "auto",
-
     marginRight: "auto",
-   // borderRadius:"50%",
   },
 }));
 
-const Image = ({image}) => {
+const Image = ({ image }) => { 
   const classes = useStyles();
-     
-  return (
-    <div className={classes.styleImage}>
-      {/* <Input
-        inputProps={{ "aria-label": "description" }}
-        style={{ color: "#000" }}
-      /> */}
-      <div className={classes.picture} style={{backgroundImage:"URL("+image+")"}}></div>
-    </div>
 
+  return (
+    <div className={classes.styleImage} data-testid="image">
+      <div
+        className={classes.picture}
+        style={{ backgroundImage: "URL(" + image + ")" }}
+      ></div>
+    </div>
   );
 };
 

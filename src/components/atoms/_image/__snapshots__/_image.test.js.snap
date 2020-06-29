@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleImage-1"
+  data-testid="image"
+>
+  <div
+    className="makeStyles-picture-2"
+    style={
+      Object {
+        "backgroundImage": "URL(undefined)",
+      }
+    }
+  />
+</div>
+`;

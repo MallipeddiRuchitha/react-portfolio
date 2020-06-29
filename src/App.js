@@ -23,7 +23,7 @@ const App = (props) => {
       component = <Callback />;
       break;
     case "/home":
-      component = props.auth.isAuthenticated()? <HomePage {...props}/> :<ErrorPage /> ;
+       component = props.auth.isAuthenticated()? <HomePage {...props}/> :<ErrorPage /> ;
       break;
     default:
       component = <ErrorPage />;

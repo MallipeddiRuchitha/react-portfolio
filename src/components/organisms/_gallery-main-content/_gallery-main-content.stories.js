@@ -1,19 +1,19 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core";
-// import { w object, text, select } from "@storybook/addon-knobs/react";
+
 import { action } from "@storybook/addon-actions";
 import GalleryMainContent from "./_gallery-main-content";
 import { myTheme } from "../../../theme";
-import {withKnobs,boolean,text} from "@storybook/addon-knobs/react"
+import { withKnobs, boolean, text } from "@storybook/addon-knobs/react";
 export default {
-  component:GalleryMainContent ,
+  component: GalleryMainContent,
   title: "GalleryMainContent",
-   decorators: [withKnobs],
+  decorators: [withKnobs],
 };
-export const normal = () => {
+export const galleryMainContent = () => {
   return (
-    <ThemeProvider theme={myTheme}>      
-      <GalleryMainContent/>
+    <ThemeProvider theme={myTheme}>
+      <GalleryMainContent />
     </ThemeProvider>
   );
 };

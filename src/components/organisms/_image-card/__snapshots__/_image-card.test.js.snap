@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageCard component Matches the snapshot 1`] = `
+<imageCard
+  image1={
+    Object {
+      "id": 1,
+      "name": "image",
+      "url": "https://www.birmingham.ac.uk/Images/News/Forest-900.jpg",
+    }
+  }
+/>
+`;

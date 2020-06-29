@@ -11,13 +11,19 @@ export default {
   decorators: [withKnobs],
 };
 
-export const normal = () => {
+export const addImageForm = () => {
+  const name = text("name", "image1");
+  const nameError=text("nameError","");
+  const urlError=text("urlError","");
   return (
     <ThemeProvider theme={myTheme}>
       <AddImageForm
         handleNameChange={action()}
         handleURLChange={action()}
         handleAddClick={action()}
+        name={name}
+        nameError={nameError}
+        urlError={urlError}
       />
     </ThemeProvider>
   );

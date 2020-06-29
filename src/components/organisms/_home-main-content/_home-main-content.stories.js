@@ -10,7 +10,7 @@ export default {
   title: "HomeMainContent",
   decorators: [withKnobs],
 };
-export const normal = () => {
+export const homeMainContent = () => {
   return (
     <ThemeProvider theme={myTheme}>      
       <HomeMainContent/>

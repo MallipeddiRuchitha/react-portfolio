@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GalleryMain component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleGalleryMainContent-1"
+  data-testid="galleryMain"
+>
+  <div
+    className="makeStyles-styleGrid-2"
+  >
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://www.birmingham.ac.uk/Images/News/Forest-900.jpg)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIWGOJcO5wb_qh4welWgFUgsZPHXMetI-iVg&usqp=CAU)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://miro.medium.com/max/8576/0*zBu6EBAwjXXXHz-z)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://www.orfonline.org/wp-content/uploads/2020/03/India-forests-1280x720.jpg)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="makeStyles-styleImage-3"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-4"
+        style={
+          Object {
+            "backgroundImage": "URL(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbbQr8RYShw7zga6H2q9kTF78VpUMq22VGA&usqp=CAU)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
