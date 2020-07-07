@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-import Images from "../../../images.json";
+
 import ImageCard from "../_image-card/_image-card";
 import Input from "../../molecules/_input/_input";
 import * as Constants from "../../../constants";
-import Button from "../../molecules/_button/_button";
+import Button from "../../atoms/_button/_button";
 import AddImageForm from "../../molecules/_add-image-form/_add-image-form";
 import { myTheme } from "../../../theme";
+import useGalleryAdminHook from "../../../hooks/useGalleryAdminHook";
 const useStyles = makeStyles((theme) => ({
   styleGalleryAdminMainContent: {
     height: "auto",
@@ -48,97 +49,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const GalleryAdminMainContent = () => {
-  const [images, setImages] = useState([...Images.images]);
-  const [isAdd, setIsAdd] = useState(false);
-  const [imageName, setImageName] = useState("");
-  const [imageURL, setImageURL] = useState("");
+  
+  
   const classes = useStyles();
-  const [nameError, setNameError] = useState("");
  
-  const [urlError, setUrlError] = useState("");
-  const [error, setError] = useState(true);
-  const handleEdit = (index, name) => {
-    console.log("edit", name);
-    let tempImgArr = [...images];
-    let position = tempImgArr.indexOf(Images.images[index - 1]);
-    tempImgArr[position].name = name;
-    setImages(tempImgArr);
-  };
-  const handleDelete = (index) => {
-    console.log("del", index);
-    let tempImgArr = [...images];
-    let position = tempImgArr.indexOf(Images.images[index - 1]);
-    tempImgArr.splice(position, 1);
-    console.log(images);
-    setImages(tempImgArr);
-  };
-  const handleNameChange = (event) => {
-    event.preventDefault();
-   
-    const name=event.target.value;
-    setImageName(name);
-    var namePattern = /^[a-zA-Z]+/;
-    if (name === "" || name === null){
-      setNameError(Constants.INVALID_NAME);
-      setError(true);
-      
-    } 
-     else if (!namePattern.test(name)){
-      setNameError(Constants.INVALID_NAME);
-      setError(true);
-
-    }
-    else 
-    {
-      setNameError("");
-      if(nameError===""&&urlError===""&&imageURL.length>0)
-      setError(false);
-
-  }
-  };
-  const handleURLChange = (event) => {
-    event.preventDefault();
-   
-    const url=event.target.value;
-    setImageURL(url);
-    var urlPattern = /^[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?$/;
-    if (url === "" || url === null){
-      setUrlError(Constants.INVALID_URL);
-      setError(true);
-      
-    } 
-     else if (!urlPattern.test(url)){
-      setUrlError(Constants.INVALID_URL);
-      setError(true);
-
-    }
-    else 
-    {
-      setUrlError("");
-      if(nameError===""&&urlError===""&&imageName.length>0)
-      setError(false);
-
-  }
-  };
-  const handleAdd = (url, name) => {
-    setIsAdd(!isAdd);
-  };
-  const handleAddClick = () => {
-    let tempImgArr = [...images];
-    let size = tempImgArr.length;
-    size = size + 1;
-    console.log("size", size);
-    let imageObject = {
-      id: size,
-      name: imageName,
-      url: imageURL,
-    };
-    console.log(imageObject);
-    tempImgArr = [...images, imageObject];
-
-    setImages(tempImgArr);
-    setIsAdd(!isAdd);
-  };
+ const{ handleNameChange,
+  handleURLChange,
+  errorValues,
+  handleAdd,
+  handleAddClick,
+  isAdd,
+  handleEdit,
+  handleDelete,
+  images}=useGalleryAdminHook();
   const imges = images.map((img, key) => (
     <ImageCard
       key={img.id}
@@ -164,9 +87,9 @@ const GalleryAdminMainContent = () => {
             handleNameChange={handleNameChange}
             handleURLChange={handleURLChange}
             handleAddClick={handleAddClick}
-            nameError={nameError}
-  error={error}
-  urlError={urlError}
+           nameError={ errorValues.nameError}
+  error={ errorValues.error}
+  urlError={ errorValues.urlError}
           ></AddImageForm>
         </>
       )}

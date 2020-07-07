@@ -6,13 +6,16 @@ exports[`Input component Matches the snapshot 1`] = `
 >
   <h5
     className="MuiTypography-root MuiTypography-h5"
-  />
+  >
+    input
+  </h5>
   <div
     className="makeStyles-styleInputFields-1"
     data-testid="inputField"
   >
     <div
       className="MuiInputBase-root MuiInput-root MuiInput-underline"
+      data-testid="inputAtom"
       onClick={[Function]}
       required={true}
       style={
@@ -23,7 +26,7 @@ exports[`Input component Matches the snapshot 1`] = `
     >
       <input
         className="MuiInputBase-input MuiInput-input"
-        data-testid="content-input"
+        data-testid=""
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}

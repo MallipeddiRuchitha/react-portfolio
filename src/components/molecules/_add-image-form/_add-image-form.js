@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import * as Constants from "../../../constants";
 
 import Input from "../../molecules/_input/_input";
-import Button from "../../molecules/_button/_button";
+import Button from "../../atoms/_button/_button";
 import { Typography } from "@material-ui/core";
 import { myTheme } from "../../../theme";
 const useStyles = makeStyles((theme) => ({
@@ -51,9 +51,9 @@ const AddImageForm = ({
           <Input
             label={Constants.NAME_LABEL}
             onChange={handleNameChange}
-            value=""
+            value="name"
           ></Input>
-           <Typography className={classes.error}>
+           <Typography className={classes.error} >
             {nameError !== "" && nameError}
           </Typography>
         </div>
@@ -61,7 +61,7 @@ const AddImageForm = ({
           <Input
             label={Constants.URL_LABEL}
             onChange={handleURLChange}
-            value=""
+            value="url"
           ></Input>
  <Typography className={classes.error}>
             {urlError !== "" && urlError}

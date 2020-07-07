@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from "react-test-renderer";
-import { render } from '@testing-library/react';
+import { render,fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ImageCard from './_image-card';
 
@@ -27,6 +27,14 @@ describe("ImageCard component",() =>{
         const { getByTestId, getByText } = render(<ImageCard image1={image} />);
         expect(getByTestId("deleteIcon")).toBeInTheDocument();
         
+    });
+    
+    test("on click of DeleteIcon",() => {
+        const mockOnClick = jest.fn();
+        const { getByTestId, getByText,getByRole } = render(<ImageCard image1={image} handleDelete={mockOnClick}/>);
+        //expect(getByTestId("button")).toBeEnabled();
+        fireEvent.click(getByTestId("deleteIcon"));
+        expect(mockOnClick).toHaveBeenCalledTimes(1);
     });
 
 

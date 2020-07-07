@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import * as Constants from "../../../constants";
 import Input from "../../atoms/_input-field/_input-field";
-import Button from "../../molecules/_button/_button";
+import Button from "../../atoms/_button/_button";
 import { myTheme } from "../../../theme";
 import {
   Typography,

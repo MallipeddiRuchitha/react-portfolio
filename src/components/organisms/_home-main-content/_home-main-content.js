@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HeaderMainContent = () => {
+const HomeMainContent = () => {
   const classes = useStyles();
   return (
     <div className={classes.styleHeaderElement} data-testid="home">
@@ -44,4 +44,4 @@ const HeaderMainContent = () => {
   );
 };
 
-export default HeaderMainContent;
+export default HomeMainContent;

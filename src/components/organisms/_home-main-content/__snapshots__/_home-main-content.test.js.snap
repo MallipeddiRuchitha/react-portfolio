@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` HomeMainContent component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleHeaderElement-1"
+  data-testid="home"
+>
+  <h2
+    className="MuiTypography-root makeStyles-name-3 MuiTypography-h2"
+  >
+    Hii there,this is Ruchitha
+  </h2>
+  <h4
+    className="MuiTypography-root MuiTypography-h4"
+  >
+    Full Stack Developer Intern
+  </h4>
+  <div
+    className="makeStyles-picture-2"
+  >
+    <div
+      className="makeStyles-styleImage-4"
+      data-testid="image"
+    >
+      <div
+        className="makeStyles-picture-5"
+        style={
+          Object {
+            "backgroundImage": "URL(https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

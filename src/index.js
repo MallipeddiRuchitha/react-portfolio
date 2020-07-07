@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Auth from './auth/Auth';
-let auth= new Auth();
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App auth={auth}/>
+   
+    <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

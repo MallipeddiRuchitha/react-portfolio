@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutCard component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-list-1"
+  data-testid="aboutCard"
+>
+  <h6
+    className="MuiTypography-root makeStyles-heading-2 MuiTypography-subtitle1"
+  >
+    Technical Skills
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    Spring
+  </p>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    React
+  </p>
+</div>
+`;

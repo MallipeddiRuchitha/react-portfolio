@@ -6,7 +6,7 @@ import Button from "./_button";
 import { myTheme } from "../../../theme";
 import { withKnobs, boolean, text } from "@storybook/addon-knobs/react";
 export default {
-  component: CustomButton,
+  component:Button,
   title: "CustomButton",
   decorators: [withKnobs],
 };

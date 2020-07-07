@@ -15,7 +15,13 @@ describe("InputField component",() =>{
         expect(getByTestId("inputField")).toBeInTheDocument();
         
     });
-   
+    test("on change of input",() => {
+        const mockOnChange = jest.fn();
+        const { getByTestId} = render(<InputField value="name"  onChange={mockOnChange}/>);        
+        fireEvent.change(getByTestId("name"),{ target: { value: 'ram' } });
+        
+        expect(mockOnChange).toHaveBeenCalledTimes(1);
+    });
    
 
 });

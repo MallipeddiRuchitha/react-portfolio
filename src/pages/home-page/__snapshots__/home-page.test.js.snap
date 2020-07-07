@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component Matches the snapshot 1`] = `
+<div
+  data-testid="homePage"
+>
+  <div
+    data-testid="headerTemplate"
+  >
+    <div
+      className="makeStyles-styleHeader-1"
+      data-testid="header"
+    >
+      <a
+        className="makeStyles-link-2"
+        href="/home"
+        onClick={[Function]}
+      >
+        <h4
+          className="MuiTypography-root makeStyles-styleHeaderElement-4 MuiTypography-h4"
+          data-testid="headerElement"
+        >
+          Home
+        </h4>
+      </a>
+      <a
+        className="makeStyles-link-2"
+        href="/gallery"
+        onClick={[Function]}
+      >
+        <h4
+          className="MuiTypography-root makeStyles-styleHeaderElement-4 MuiTypography-h4"
+          data-testid="headerElement"
+        >
+          Gallery
+        </h4>
+      </a>
+      <a
+        className="makeStyles-link-2"
+        href="/contact"
+        onClick={[Function]}
+      >
+        <h4
+          className="MuiTypography-root makeStyles-styleHeaderElement-4 MuiTypography-h4"
+          data-testid="headerElement"
+        >
+          Contact
+        </h4>
+      </a>
+      <a
+        className="makeStyles-link-2"
+        href="/about"
+        onClick={[Function]}
+      >
+        <h4
+          className="MuiTypography-root makeStyles-styleHeaderElement-4 MuiTypography-h4"
+          data-testid="headerElement"
+        >
+          About
+        </h4>
+      </a>
+      <a
+        className="makeStyles-link-2"
+        href="/gallery-admin"
+        onClick={[Function]}
+      >
+        <h4
+          className="MuiTypography-root makeStyles-styleHeaderElement-4 MuiTypography-h4"
+          data-testid="headerElement"
+        >
+          GalleryAdmin
+        </h4>
+      </a>
+      <div
+        className="makeStyles-button-3"
+      >
+        <div
+          className="makeStyles-button-5"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            data-testid="button"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <span
+                className="MuiTypography-root MuiTypography-button"
+              >
+                 
+                Logout
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -7,6 +7,7 @@ exports[`InputField component Matches the snapshot 1`] = `
 >
   <div
     className="MuiInputBase-root MuiInput-root MuiInput-underline"
+    data-testid="inputAtom"
     onClick={[Function]}
     required={true}
     style={
@@ -17,7 +18,6 @@ exports[`InputField component Matches the snapshot 1`] = `
   >
     <input
       className="MuiInputBase-input MuiInput-input"
-      data-testid="content-input"
       onAnimationStart={[Function]}
       onBlur={[Function]}
       onChange={[Function]}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditImageForm component Matches the snapshot 1`] = `
+exports[`ContactMainContent component Matches the snapshot 1`] = `
 <div
   className="makeStyles-styleContactMainContent-1"
   data-testid="contact"
@@ -31,6 +31,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
           >
             <div
               className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              data-testid="inputAtom"
               onClick={[Function]}
               required={true}
               style={
@@ -41,8 +42,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
             >
               <input
                 className="MuiInputBase-input MuiInput-input"
-                data-testid="content-input"
-                defaultValue=""
+                data-testid="name"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -56,6 +56,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
       </div>
       <p
         className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+        data-testid="nameError"
       />
       <div
         className="makeStyles-input-3"
@@ -74,6 +75,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
           >
             <div
               className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              data-testid="inputAtom"
               onClick={[Function]}
               required={true}
               style={
@@ -84,8 +86,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
             >
               <input
                 className="MuiInputBase-input MuiInput-input"
-                data-testid="content-input"
-                defaultValue=""
+                data-testid="email"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -99,6 +100,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
       </div>
       <p
         className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+        data-testid="emailError"
       />
       <div
         className="makeStyles-input-3"
@@ -117,6 +119,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
           >
             <div
               className="MuiInputBase-root MuiInput-root MuiInput-underline"
+              data-testid="inputAtom"
               onClick={[Function]}
               required={true}
               style={
@@ -127,8 +130,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
             >
               <input
                 className="MuiInputBase-input MuiInput-input"
-                data-testid="content-input"
-                defaultValue=""
+                data-testid="message"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -142,13 +144,14 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
       </div>
       <p
         className="MuiTypography-root makeStyles-error-5 MuiTypography-body1"
+        data-testid="messageError"
       />
       <div
         className="makeStyles-button-7"
-        data-testid="button"
       >
         <button
           className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+          data-testid="button"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}

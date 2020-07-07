@@ -6,7 +6,7 @@ import * as Constants from "../../../constants";
 import { Link } from "react-router-dom";
 import { myTheme } from "../../../theme";
 import Auth from "../../../auth/Auth";
-import Button from "../../molecules/_button/_button"
+import Button from "../../atoms/_button/_button"
 
 const useStyles = makeStyles((theme) => ({
   styleHeader: {

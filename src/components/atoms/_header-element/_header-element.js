@@ -1,8 +1,7 @@
 import React from "react";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-
+import { myTheme } from "../../../theme";
 const useStyles = makeStyles((theme) => ({
   styleHeaderElement: {
     height: "20px",
@@ -10,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "30px",
     marginTop: "20px",
     "&:hover": {
-      color: "black",
+      color: myTheme.palette.myColor.blackColor,
     },
   },
 }));

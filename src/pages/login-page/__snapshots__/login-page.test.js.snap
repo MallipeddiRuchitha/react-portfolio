@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage component Matches the snapshot 1`] = `
+<div
+  data-testid="loginPage"
+>
+  <div
+    data-testid="loginTemplate"
+  >
+     
+    <div
+      className="makeStyles-styleLogin-3"
+      data-testid="login"
+    >
+      <h2
+        className="MuiTypography-root makeStyles-input-2 MuiTypography-h2"
+      >
+        LoginPage
+      </h2>
+      <div
+        className="makeStyles-forms-1"
+      >
+        <div
+          className="makeStyles-button-4"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            data-testid="button"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[MockFunction]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              <span
+                className="MuiTypography-root MuiTypography-button"
+              >
+                 
+                login
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

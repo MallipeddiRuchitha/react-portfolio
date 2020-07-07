@@ -12,20 +12,18 @@ describe("EditImageForm component", () => {
     );
     expect(editImageForm.toJSON()).toMatchSnapshot();
   });
-  test("inputField element is rendered", () => {
+  test("Matches the snapshot for name Error", () => {
+    const editImageForm = create(
+      <EditImageForm name={name} nameError="invalid name" />
+    );
+    expect(editImageForm.toJSON()).toMatchSnapshot();
+  });
+  test("component is rendered", () => {
     const { getByTestId, getByText } = render(
       <EditImageForm name={name} nameError={nameError} />
     );
     expect(getByTestId("editImageForm")).toBeInTheDocument();
   });
 
-  test("onChange event for name", () => {
-    const { getByTestId } = render(
-      <EditImageForm name={name} nameError={nameError} />
-    );
-    const editName = getByTestId("content-input");
-
-    fireEvent.change(editName, { target: { value: "vishwas@gmail.com" } });
-    expect(editName).toHaveValue("vishwas@gmail.com");
-  });
+ 
 });

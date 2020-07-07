@@ -9,21 +9,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const InputField = ({ value, onChange }) => {
+const InputField = ({ value, onChange,ref }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.styleInputFields} data-testid="inputField">
-      <Input
-        defaultValue={value}
+      <Input data-testid="inputAtom"
+        //defaultValue={value}
         inputProps={{ "aria-label": "description" }}
         style={{ color: "#000" }}
         onChange={onChange}
         required
-        inputProps={{ "data-testid": "content-input" }}
+        inputProps={{ "data-testid": value }}
+        
       />
     </div>
   );
 };
 
-export default InputField;
+export default (InputField);

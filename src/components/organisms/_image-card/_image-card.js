@@ -6,10 +6,11 @@ import Card from "@material-ui/core/Card";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import * as Constants from "../../../constants";
-import Button from "../../molecules/_button/_button";
+import Button from "../../atoms/_button/_button";
 import Image from "../../atoms/_image/_image";
 import EditImageForm from "../../molecules/edit-image-form/_edit-image-form";
 import { myTheme } from "../../../theme";
+import useImageCardHook from "../../../hooks/useImageCardHook";
 const useStyles = makeStyles((theme) => ({
   styleImageCard: {
     backgroundColor: myTheme.palette.secondary.main,
@@ -39,35 +40,14 @@ const useStyles = makeStyles((theme) => ({
 
 const ImageCard = ({ image1, handleDelete, handleEdit }) => {
   const classes = useStyles();
-  const [edit, setEdit] = useState(false);
-  const [name, setName] = useState(image1.name);
-  const[nameError,setNameError]=useState("");
-  const handleClick = () => {
-    setEdit(true);
-  };
-  const handleChangeInName = (event) => {
-    event.preventDefault();
-    // setName(event.target.value);
-    const name=event.target.value;
-    setName(name);
-    var namePattern = /^[a-zA-Z]+/;
-    if ((name === "" || name === null||!namePattern.test(name))){
-      setNameError(Constants.INVALID_NAME);
-      
-      
-    } 
-     else { setNameError("");
-      
-    }
-   
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setEdit(false);
-    return handleEdit(image1.id, name);
-  };
-
+ const  {
+  handleClick,
+  handleSubmit,
+  handleChangeInName,
+  nameError,
+  name,
+  edit,
+}=useImageCardHook({image1, handleDelete, handleEdit});
   return (
     <div className={classes.styleImageCard} data-testid="imageCard">
       <div className={classes.picture}>

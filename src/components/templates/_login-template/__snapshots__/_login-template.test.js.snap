@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginTemplate component Matches the snapshot 1`] = `
+<div
+  data-testid="loginTemplate"
+>
+   
+</div>
+`;

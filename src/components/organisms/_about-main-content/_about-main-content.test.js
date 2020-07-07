@@ -12,7 +12,7 @@ describe("About component",() =>{
     })
     test("about element is rendered",() => {
         const { getByTestId, getByText } = render(<About />);
-        expect(getByTestId("about")).toBeInTheDocument();
+        expect(getByTestId("aboutMainContent")).toBeInTheDocument();
         
     });
    

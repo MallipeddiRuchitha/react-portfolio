@@ -7,12 +7,12 @@ import MainComponentRouter from "../../components/organisms/_routing/_routing";
 
 const HomePage = () => {
   return (
-    <>
+    <div data-testid="homePage">
       <HeaderTemplate
         header={<Header></Header>}
         mainContent={<MainComponentRouter></MainComponentRouter>}
       ></HeaderTemplate>
-    </>
+    </div>
   );
 };
 

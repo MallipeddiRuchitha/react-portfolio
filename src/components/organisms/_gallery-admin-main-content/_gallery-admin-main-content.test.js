@@ -15,11 +15,7 @@ describe("GalleryAdmin component",() =>{
         expect(getByTestId("galleryAdmin")).toBeInTheDocument();
         
     });
-    test("GalleryAdmmin is rendered",() => {
-        const { getByTestId, getByText } = render(<GalleryAdmin/>);
-        expect(getByTestId("galleryAdmin")).toBeInTheDocument();
-        
-    });
+   
    
    
 

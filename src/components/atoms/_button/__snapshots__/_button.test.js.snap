@@ -3,10 +3,10 @@
 exports[`Button component Matches the snapshot 1`] = `
 <div
   className="makeStyles-button-1"
-  data-testid="button"
 >
   <button
     className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+    data-testid="button"
     disabled={false}
     onBlur={[Function]}
     onDragLeave={[Function]}

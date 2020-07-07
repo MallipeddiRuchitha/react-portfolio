@@ -11,6 +11,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
   >
     <div
       className="MuiInputBase-root MuiInput-root MuiInput-underline"
+      data-testid="inputAtom"
       onClick={[Function]}
       required={true}
       style={
@@ -21,8 +22,7 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
     >
       <input
         className="MuiInputBase-input MuiInput-input"
-        data-testid="content-input"
-        defaultValue="image1"
+        data-testid="image1"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
@@ -37,10 +37,10 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
   />
   <div
     className="makeStyles-button-5"
-    data-testid="button"
   >
     <button
       className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      data-testid="button"
       disabled={false}
       onBlur={[Function]}
       onDragLeave={[Function]}
@@ -54,6 +54,79 @@ exports[`EditImageForm component Matches the snapshot 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-button"
+        >
+           
+          save
+        </span>
+      </span>
+    </button>
+  </div>
+</form>
+`;
+
+exports[`EditImageForm component Matches the snapshot for name Error 1`] = `
+<form
+  className="makeStyles-form-1"
+  data-testid="editImageForm"
+>
+  <div
+    className="makeStyles-styleInputFields-4"
+    data-testid="inputField"
+  >
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline"
+      data-testid="inputAtom"
+      onClick={[Function]}
+      required={true}
+      style={
+        Object {
+          "color": "#000",
+        }
+      }
+    >
+      <input
+        className="MuiInputBase-input MuiInput-input"
+        data-testid="image1"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="text"
+      />
+    </div>
+  </div>
+  <p
+    className="MuiTypography-root makeStyles-error-3 MuiTypography-body1"
+  >
+    invalid name
+  </p>
+  <div
+    className="makeStyles-button-5"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+      data-testid="button"
+      disabled={true}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
       type="button"
     >
       <span
