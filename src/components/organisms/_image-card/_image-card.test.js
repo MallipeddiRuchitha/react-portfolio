@@ -3,7 +3,7 @@ import { shallow ,mount} from 'enzyme';
 import ImageCard from './_image-card';
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
-const image={id:1,name:"image",url:"https://www.birmingham.ac.uk/Images/News/Forest-900.jpg"}
+const image={id:1,name:"forest1",url:"https://www.birmingham.ac.uk/Images/News/Forest-900.jpg"}
 
 describe("ImageCard component",() =>{
     test("Matches the snapshot",() => {
@@ -40,6 +40,7 @@ describe("ImageCard component",() =>{
        //expect(galleryAdmin.find(EditImageForm).exists()).toEqual(true);
          
     });
+    
 
 
 
