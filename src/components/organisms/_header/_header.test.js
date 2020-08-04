@@ -1,24 +1,23 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render ,fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import Header from './_header';
 import {withRouter,BrowserRouter as Router} from 'react-router-dom';
+import HeaderElement from "../../atoms/_header-element/_header-element";
 describe("Header component",() =>{
     test("Matches the snapshot",() => {
-        const header = create(<Router><Header /></Router>);
-        expect(header.toJSON()).toMatchSnapshot();
+        const header = shallow(<Router><Header /></Router>);
+        expect(header).toMatchSnapshot();
 
     })
     test("header element is rendered",() => {
-        const { getByTestId, getByText } = render(<Router><Header /></Router>);
-        expect(getByTestId("header")).toBeInTheDocument();
+        const header = mount(<Router><Header /></Router>);
+        expect(header.find("#header").exists()).toEqual(true);
         
     });
     test(" 5 header elements  should be there", () => {
-        const { getAllByTestId } = render(<Router><Header /></Router>);
-        // expect(getByTestId(1)).toBeInTheDocument();
-        expect(getAllByTestId("headerElement")).toHaveLength(5);
+        const header = mount(<Router><Header /></Router>);
+        expect(header.find(HeaderElement).length).toEqual(5);
+
       });
    
 

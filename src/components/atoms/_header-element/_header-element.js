@@ -21,7 +21,8 @@ const HeaderElement = ({ text }) => {
     <Typography
       variant="h4"
       className={classes.styleHeaderElement}
-      data-testid="headerElement"
+      id="headerElement"
+      
     >
       {text}
     </Typography>

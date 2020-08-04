@@ -1,19 +1,17 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render ,fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import About from './_about-main-content';
 
 describe("About component",() =>{
     test("Matches the snapshot",() => {
-        const about = create(<About />);
-        expect(about.toJSON()).toMatchSnapshot();
+        const about = shallow(<About />);
+        expect(about).toMatchSnapshot();
 
     })
     test("about element is rendered",() => {
-        const { getByTestId, getByText } = render(<About />);
-        expect(getByTestId("aboutMainContent")).toBeInTheDocument();
-        
+        const about= shallow(<About />);
+        expect(about.find("#aboutMainContent").exists()).toEqual(true);
+        console.log(about.debug());
     });
    
    

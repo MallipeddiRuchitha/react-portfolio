@@ -2,29 +2,10 @@
 
 exports[`ErrorPage component Matches the snapshot 1`] = `
 <div
-  data-testId="errorPage"
+  id="errorPage"
 >
-  <div
-    data-testid="loginTemplate"
-  >
-     
-    <div
-      className="makeStyles-styleError-3"
-      data-testid="error"
-    >
-      <h3
-        className="MuiTypography-root makeStyles-inputError-1 MuiTypography-h3"
-      >
-        You have to login first
-      </h3>
-      <a
-        className="makeStyles-link-2"
-        href="/"
-      >
-         
-        Back to login page
-      </a>
-    </div>
-  </div>
+  <LoginTemplate
+    content={<Error />}
+  />
 </div>
 `;

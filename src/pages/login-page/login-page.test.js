@@ -1,7 +1,5 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render ,fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import LoginPage from './login-page';
   
 const auth={
@@ -9,13 +7,14 @@ const auth={
 }
 describe("LoginPage component",() =>{
     test("Matches the snapshot",() => {
-        const input = create(< LoginPage auth={auth}/>);
-        expect(input.toJSON()).toMatchSnapshot();
+        const loginPage = shallow(< LoginPage/>);
+        expect(loginPage).toMatchSnapshot();
+
 
     })
     test("LoginPage element is rendered",() => {
-        const { getByTestId, getByText } = render(<LoginPage auth={auth}/>);
-        expect(getByTestId("loginPage")).toBeInTheDocument();
+        const loginPage = shallow(< LoginPage/>);
+        expect(loginPage.find('#loginPage').exists()).toEqual(true);
         
     });
    

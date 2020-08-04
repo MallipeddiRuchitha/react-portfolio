@@ -63,7 +63,7 @@ const AboutMainContent = () => {
     Constants.COURSES_PROJECT,
   ];
   return (
-    <div className={classes.aboutMainContent} data-testid="aboutMainContent">
+    <div className={classes.aboutMainContent} id="aboutMainContent">
       <Typography variant="subtitle2" className={classes.about}>
         {Constants.ABOUT_ME}
       </Typography>

@@ -4,33 +4,16 @@ exports[`Button component Matches the snapshot 1`] = `
 <div
   className="makeStyles-button-1"
 >
-  <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-    data-testid="button"
-    disabled={false}
-    onBlur={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
+  <WithStyles(ForwardRef(Button))
+    color="primary"
+    id="button"
+    variant="contained"
   >
-    <span
-      className="MuiButton-label"
+    <WithStyles(ForwardRef(Typography))
+      variant="button"
     >
-      <span
-        className="MuiTypography-root MuiTypography-button"
-      >
-         
-      </span>
-    </span>
-  </button>
+       
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Button))>
 </div>
 `;

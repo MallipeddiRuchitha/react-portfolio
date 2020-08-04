@@ -7,6 +7,7 @@ const useImageCardHook = ({image1, handleDelete, handleEdit}) => {
     const[nameError,setNameError]=useState("");
     const handleClick = () => {
       setEdit(true);
+      console.log("clicked");
     };
     const handleChangeInName = (event) => {
       event.preventDefault();
@@ -15,14 +16,12 @@ const useImageCardHook = ({image1, handleDelete, handleEdit}) => {
       setName(name);
       var namePattern = /^[a-zA-Z]+/;
       if ((name === "" || name === null||!namePattern.test(name))){
-        setNameError(Constants.INVALID_NAME);
-        
+        setNameError(Constants.INVALID_NAME);      
         
       } 
-       else { setNameError("");
-        
+       else { setNameError("");        
       }
-     
+     console.log(name);
     };
   
     const handleSubmit = (event) => {

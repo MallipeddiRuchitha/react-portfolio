@@ -4,7 +4,7 @@ import React from 'react';
 
 const HeaderTemplate = ({header,mainContent}) => 
 {  return(
-    <div data-testid="headerTemplate">
+    <div id="headerTemplate">
     {header}
     {mainContent}
     </div>

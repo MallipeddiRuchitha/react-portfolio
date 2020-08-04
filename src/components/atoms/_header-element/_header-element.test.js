@@ -1,20 +1,19 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import HeaderElement from './_header-element';
 
 describe("HeaderElement component",() =>{
     test("Matches the snapshot",() => {
-        const headerElement = create(<HeaderElement />);
-        expect(headerElement.toJSON()).toMatchSnapshot();
+        
+        const headerElement = shallow(<HeaderElement />);
+        expect(headerElement).toMatchSnapshot();
 
     })
     test("header element is rendered",() => {
-        const { getByTestId, getByText } = render(<HeaderElement />);
-        expect(getByTestId("headerElement")).toBeInTheDocument();
+        const wrapper = shallow(<HeaderElement />);
+        expect(wrapper.find('#headerElement').exists()).toEqual(true);
         
     });
-   
+    
 
 });

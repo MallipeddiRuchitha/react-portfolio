@@ -7,7 +7,7 @@ import MainComponentRouter from "../../components/organisms/_routing/_routing";
 
 const HomePage = () => {
   return (
-    <div data-testid="homePage">
+    <div id="homePage">
       <HeaderTemplate
         header={<Header></Header>}
         mainContent={<MainComponentRouter></MainComponentRouter>}

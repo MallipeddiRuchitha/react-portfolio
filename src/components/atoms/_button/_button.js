@@ -14,7 +14,7 @@ const CustomButton = ({ value, onClick ,disabled}) => {
 
   return (
     <div className={classes.button} >
-      <Button onClick={onClick} variant="contained" color="primary" disabled={disabled} data-testid="button">
+      <Button onClick={onClick} variant="contained" color="primary" disabled={disabled} id="button">
         <Typography variant="button"> {value}</Typography>
       </Button>
     </div>

@@ -72,7 +72,7 @@ const GalleryAdminMainContent = () => {
   ));
 
   return (
-    <div className={classes.styleGalleryAdminMainContent} data-testid="galleryAdmin">
+    <div className={classes.styleGalleryAdminMainContent} id="galleryAdmin">
       {!isAdd && (
         <>        
           <div className={classes.button}>

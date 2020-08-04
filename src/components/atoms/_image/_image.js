@@ -20,7 +20,7 @@ const Image = ({ image }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.styleImage} data-testid="image">
+    <div className={classes.styleImage} id="image">
       <div
         className={classes.picture}
         style={{ backgroundImage: "URL(" + image + ")" }}

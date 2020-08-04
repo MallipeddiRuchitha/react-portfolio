@@ -29,7 +29,7 @@ const GalleryMainContent = () => {
     <Image key={img.id} image={img.url} />
   ));
   return (
-    <div className={classes.styleGalleryMainContent} data-testid="galleryMain">
+    <div className={classes.styleGalleryMainContent} id="galleryMain" >
       <div className={classes.styleGrid}>{images}</div>
     </div>
   );

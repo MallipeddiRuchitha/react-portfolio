@@ -3,111 +3,46 @@
 exports[`About component Matches the snapshot 1`] = `
 <div
   className="makeStyles-aboutMainContent-1"
-  data-testid="aboutMainContent"
+  id="aboutMainContent"
 >
-  <h6
-    className="MuiTypography-root makeStyles-about-2 MuiTypography-subtitle2"
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-about-2"
+    variant="subtitle2"
   >
      I am Ruchitha from Keshav Memorial Institute of Technology.I'm passionate about coding and learning new technologies.In free time I like to chill at home watching movies and colouring .I love to be surrounded by positive and motivating people. 
-  </h6>
+  </WithStyles(ForwardRef(Typography))>
   <div
     className="makeStyles-list-4"
   >
-    <div
-      className="makeStyles-list-6"
-      data-testid="aboutCard"
-    >
-      <h6
-        className="MuiTypography-root makeStyles-heading-7 MuiTypography-subtitle1"
-      >
-        Technical Skills
-      </h6>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Java
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        DBMS
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        React
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Spring
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Spring boot
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        REST
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Networking
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Linux
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        HTML,CSS
-      </p>
-    </div>
-    <div
-      className="makeStyles-list-6"
-      data-testid="aboutCard"
-    >
-      <h6
-        className="MuiTypography-root makeStyles-heading-7 MuiTypography-subtitle1"
-      >
-        Projects
-      </h6>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Detection and Prediction of Clouds
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Gate Pass Management System
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Making Data Based Decisions Using Google Analytics
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Online Doctor Appointment
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Spring boot REST API which gives information about movies and associated actors
-      </p>
-      <p
-        className="MuiTypography-root MuiTypography-body1"
-      >
-        Spring boot application which gives information about courses and related topics
-      </p>
-    </div>
+    <AboutCard
+      array={
+        Array [
+          "Java",
+          "DBMS",
+          "React",
+          "Spring",
+          "Spring boot",
+          "REST",
+          "Networking",
+          "Linux",
+          "HTML,CSS",
+        ]
+      }
+      heading="Technical Skills"
+    />
+    <AboutCard
+      array={
+        Array [
+          "Detection and Prediction of Clouds",
+          "Gate Pass Management System",
+          "Making Data Based Decisions Using Google Analytics",
+          "Online Doctor Appointment",
+          "Spring boot REST API which gives information about movies and associated actors",
+          "Spring boot application which gives information about courses and related topics",
+        ]
+      }
+      heading="Projects"
+    />
   </div>
 </div>
 `;

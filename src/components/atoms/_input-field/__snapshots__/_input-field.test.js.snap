@@ -3,28 +3,20 @@
 exports[`InputField component Matches the snapshot 1`] = `
 <div
   className="makeStyles-styleInputFields-1"
-  data-testid="inputField"
+  id="inputField"
 >
-  <div
-    className="MuiInputBase-root MuiInput-root MuiInput-underline"
-    data-testid="inputAtom"
-    onClick={[Function]}
+  <WithStyles(ForwardRef(Input))
+    inputProps={
+      Object {
+        "data-testid": undefined,
+      }
+    }
     required={true}
     style={
       Object {
         "color": "#000",
       }
     }
-  >
-    <input
-      className="MuiInputBase-input MuiInput-input"
-      onAnimationStart={[Function]}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      required={true}
-      type="text"
-    />
-  </div>
+  />
 </div>
 `;

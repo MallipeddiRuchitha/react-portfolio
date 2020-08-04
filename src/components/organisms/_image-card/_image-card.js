@@ -49,7 +49,7 @@ const ImageCard = ({ image1, handleDelete, handleEdit }) => {
   edit,
 }=useImageCardHook({image1, handleDelete, handleEdit});
   return (
-    <div className={classes.styleImageCard} data-testid="imageCard">
+    <div className={classes.styleImageCard} id="imagecard">
       <div className={classes.picture}>
         <Image image={image1.url}></Image>
       </div>
@@ -64,13 +64,15 @@ const ImageCard = ({ image1, handleDelete, handleEdit }) => {
         ></EditImageForm>
       )}
       <div className={classes.icons}>
-        <EditIcon data-testid="editIcon"
+        
+        <EditIcon 
           className={classes.edit}
           style={{ cursor: "pointer" }}
           onClick={handleClick}
         ></EditIcon>
+   
         <DeleteIcon
-        data-testid="deleteIcon"
+        id="deleteIcon"
           style={{ cursor: "pointer" }}
           onClick={() => {
             handleDelete(image1.id);

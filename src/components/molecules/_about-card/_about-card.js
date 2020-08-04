@@ -28,7 +28,7 @@ const AboutCard = ({ array, heading }) => {
   ));
 
   return (
-    <div className={classes.list} data-testid="aboutCard">
+    <div className={classes.list} id="aboutCard">
       <Typography variant="subtitle1" className={classes.heading}>
         {heading}
       </Typography>

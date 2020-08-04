@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({}));
 
 const LoginTemplate = ({ content }) => {
   const classes = useStyles();
-  return <div className={classes.styleLogin} data-testid="loginTemplate"> {content}</div>;
+  return <div className={classes.styleLogin} id="loginTemplate"> {content}</div>;
 };
 
 export default LoginTemplate;

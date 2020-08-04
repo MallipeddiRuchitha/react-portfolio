@@ -24,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
 const Error = () => {
   const classes = useStyles();
   return (
-    <div data-testid="error" className={classes.styleError}>
+    <div id="error" className={classes.styleError}>
       <Typography className={classes.inputError} variant="h3">
         {Constants.LOGIN_FIRST}
       </Typography>
-      <a href="/" className={classes.link}>
+      <a href="/" className={classes.link} id="link">
         {" "}
         {Constants.BACK_TO_LOGIN_PAGE}
       </a>

@@ -3,22 +3,19 @@
 exports[`AboutCard component Matches the snapshot 1`] = `
 <div
   className="makeStyles-list-1"
-  data-testid="aboutCard"
+  id="aboutCard"
 >
-  <h6
-    className="MuiTypography-root makeStyles-heading-2 MuiTypography-subtitle1"
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-heading-2"
+    variant="subtitle1"
   >
     Technical Skills
-  </h6>
-  <p
-    className="MuiTypography-root MuiTypography-body1"
-  >
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))>
     Spring
-  </p>
-  <p
-    className="MuiTypography-root MuiTypography-body1"
-  >
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))>
     React
-  </p>
+  </WithStyles(ForwardRef(Typography))>
 </div>
 `;

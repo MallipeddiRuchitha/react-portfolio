@@ -32,12 +32,13 @@ const EditImageForm = ({ name, handleChangeInName, handleSubmit,nameError}) => {
   console.log(name);
 
   return (
-    <form className={classes.form} data-testid="editImageForm">
+    <form className={classes.form} id="editImageForm">
       <Input
         value={name}
         className={classes.name}
         style={{ color: myTheme.palette.secondary.main }}
-        onChange={handleChangeInName}        
+        onChange={handleChangeInName} 
+        test="Name"       
       ></Input>
       <Typography className={classes.error}>
             {nameError !== "" && nameError}

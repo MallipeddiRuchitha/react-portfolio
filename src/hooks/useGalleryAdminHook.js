@@ -18,6 +18,7 @@ const useGalleryAdminHook = () => {
     let position = tempImgArr.indexOf(Images.images[index - 1]);
     tempImgArr[position].name = name;
     setImages(tempImgArr);
+    console.log("edited",name)
   };
   const handleDelete = (index) => {
     console.log("del", index);
@@ -65,7 +66,7 @@ const useGalleryAdminHook = () => {
         //setError(false);
         setErrorValues((errorValues) => ({
           ...errorValues,
-          ["error"]: true,
+          ["error"]: false,
         }));
     }
   };
@@ -124,7 +125,7 @@ const useGalleryAdminHook = () => {
       name: imageName,
       url: imageURL,
     };
-    console.log(imageObject);
+    {console.log(imageObject)};
     tempImgArr = [...images, imageObject];
 
     setImages(tempImgArr);

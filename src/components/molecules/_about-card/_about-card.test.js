@@ -1,19 +1,17 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render ,fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import AboutCard from './_about-card';
  
 const array=["Spring","React"]
 describe("AboutCard component",() =>{
     test("Matches the snapshot",() => {
-        const  aboutCard= create(<AboutCard heading="Technical Skills" array={array}/>);
-        expect(aboutCard.toJSON()).toMatchSnapshot();
+        const  aboutCard= shallow(<AboutCard heading="Technical Skills" array={array}/>);
+        expect(aboutCard).toMatchSnapshot();
 
     })
     test("about card element is rendered",() => {
-        const { getByTestId} = render(<AboutCard heading="Technical Skills" array={array}/>);
-        expect(getByTestId("aboutCard")).toBeInTheDocument();
+        const aboutCard = shallow(<AboutCard heading="Technical Skills" array={array}/>);
+        expect(aboutCard.find("#aboutCard").exists()).toEqual(true);
         
     });
 

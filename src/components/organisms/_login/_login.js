@@ -32,7 +32,7 @@ const Login = () => {
   console.log(useContext(store))
   return (
     
-    <div data-testid="login" className={classes.styleLogin}>
+    <div id="login" className={classes.styleLogin}>
       <Typography variant="h2" className={classes.input}>
         {Constants.LOGIN_PAGE}
       </Typography>

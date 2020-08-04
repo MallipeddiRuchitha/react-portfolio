@@ -3,16 +3,18 @@
 exports[`Error component Matches the snapshot 1`] = `
 <div
   className="makeStyles-styleError-3"
-  data-testid="error"
+  id="error"
 >
-  <h3
-    className="MuiTypography-root makeStyles-inputError-1 MuiTypography-h3"
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-inputError-1"
+    variant="h3"
   >
     You have to login first
-  </h3>
+  </WithStyles(ForwardRef(Typography))>
   <a
     className="makeStyles-link-2"
     href="/"
+    id="link"
   >
      
     Back to login page

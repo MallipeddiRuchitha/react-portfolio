@@ -42,7 +42,7 @@ const AddImageForm = ({
 }) => {
   const classes = useStyles();
   return (
-    <div data-testid="addImageForm">
+    <div id="addImageForm">
       <Typography variant="h3" className={classes.heading}>
         {Constants.ADD_IMAGE}
       </Typography>
@@ -51,7 +51,7 @@ const AddImageForm = ({
           <Input
             label={Constants.NAME_LABEL}
             onChange={handleNameChange}
-            value="name"
+            value=""
           ></Input>
            <Typography className={classes.error} >
             {nameError !== "" && nameError}
@@ -61,7 +61,7 @@ const AddImageForm = ({
           <Input
             label={Constants.URL_LABEL}
             onChange={handleURLChange}
-            value="url"
+            value=""
           ></Input>
  <Typography className={classes.error}>
             {urlError !== "" && urlError}

@@ -1,19 +1,17 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render ,fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import HomeMainContent from './_home-main-content';
 
 describe(" HomeMainContent component",() =>{
     test("Matches the snapshot",() => {
-        const galleryAdmin= create(< HomeMainContent/>);
-        expect(galleryAdmin.toJSON()).toMatchSnapshot();
+        const home= shallow(< HomeMainContent/>);
+        expect(HTMLOListElement).toMatchSnapshot();
 
     })
     test("GalleryAdmmin is rendered",() => {
-        const { getByTestId } = render(< HomeMainContent/>);
-        expect(getByTestId("home")).toBeInTheDocument();
+        const home= shallow(< HomeMainContent/>);
         
+        expect(home.find('#home').exists()).toEqual(true);
     });
    
    

@@ -2,39 +2,17 @@
 
 exports[`Input component Matches the snapshot 1`] = `
 <div
-  data-testid="input"
+  id="input"
 >
-  <h5
-    className="MuiTypography-root MuiTypography-h5"
+  <WithStyles(ForwardRef(Typography))
+    variant="h5"
   >
-    input
-  </h5>
-  <div
-    className="makeStyles-styleInputFields-1"
-    data-testid="inputField"
-  >
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline"
-      data-testid="inputAtom"
-      onClick={[Function]}
-      required={true}
-      style={
-        Object {
-          "color": "#000",
-        }
-      }
-    >
-      <input
-        className="MuiInputBase-input MuiInput-input"
-        data-testid=""
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={true}
-        type="text"
-      />
-    </div>
-  </div>
+    name
+  </WithStyles(ForwardRef(Typography))>
+  <InputField
+    onChange={[MockFunction]}
+    test="name"
+    value=""
+  />
 </div>
 `;

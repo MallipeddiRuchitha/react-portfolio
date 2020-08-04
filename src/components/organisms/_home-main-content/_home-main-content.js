@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 const HomeMainContent = () => {
   const classes = useStyles();
   return (
-    <div className={classes.styleHeaderElement} data-testid="home">
+    <div className={classes.styleHeaderElement} id="home">
       <Typography variant="h2" className={classes.name}>
         {Constants.NAME}
       </Typography>

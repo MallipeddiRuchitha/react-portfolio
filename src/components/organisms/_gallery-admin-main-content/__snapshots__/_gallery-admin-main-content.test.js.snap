@@ -3,439 +3,91 @@
 exports[`GalleryAdmin component Matches the snapshot 1`] = `
 <div
   className="makeStyles-styleGalleryAdminMainContent-1"
-  data-testid="galleryAdmin"
+  id="galleryAdmin"
 >
   <div
     className="makeStyles-button-4"
   >
-    <div
-      className="makeStyles-button-6"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-        data-testid="button"
-        disabled={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        >
-          <span
-            className="MuiTypography-root MuiTypography-button"
-          >
-             
-            Add
-          </span>
-        </span>
-      </button>
-    </div>
+    <CustomButton
+      onClick={[Function]}
+      value="Add"
+    />
   </div>
   <div
     className="makeStyles-styleGrid-2"
   >
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://www.birmingham.ac.uk/Images/News/Forest-900.jpg)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest1
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIWGOJcO5wb_qh4welWgFUgsZPHXMetI-iVg&usqp=CAU)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest2
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://miro.medium.com/max/8576/0*zBu6EBAwjXXXHz-z)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest3
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest4
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://www.orfonline.org/wp-content/uploads/2020/03/India-forests-1280x720.jpg)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest5
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="makeStyles-styleImageCard-7"
-      data-testid="imageCard"
-    >
-      <div
-        className="makeStyles-picture-8"
-      >
-        <div
-          className="makeStyles-styleImage-12"
-          data-testid="image"
-        >
-          <div
-            className="makeStyles-picture-13"
-            style={
-              Object {
-                "backgroundImage": "URL(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbbQr8RYShw7zga6H2q9kTF78VpUMq22VGA&usqp=CAU)",
-              }
-            }
-          />
-        </div>
-      </div>
-      <p
-        className="MuiTypography-root makeStyles-name-9 MuiTypography-body1"
-      >
-        Forest6
-      </p>
-      <div
-        className="makeStyles-icons-11"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-edit-10"
-          data-testid="editIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-          />
-        </svg>
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root"
-          data-testid="deleteIcon"
-          focusable="false"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-          />
-        </svg>
-      </div>
-    </div>
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "1",
+          "name": "Forest1",
+          "url": "https://www.birmingham.ac.uk/Images/News/Forest-900.jpg",
+        }
+      }
+      key="1"
+    />
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "2",
+          "name": "Forest2",
+          "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIWGOJcO5wb_qh4welWgFUgsZPHXMetI-iVg&usqp=CAU",
+        }
+      }
+      key="2"
+    />
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "3",
+          "name": "Forest3",
+          "url": "https://miro.medium.com/max/8576/0*zBu6EBAwjXXXHz-z",
+        }
+      }
+      key="3"
+    />
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "4",
+          "name": "Forest4",
+          "url": "https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg",
+        }
+      }
+      key="4"
+    />
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "5",
+          "name": "Forest5",
+          "url": "https://www.orfonline.org/wp-content/uploads/2020/03/India-forests-1280x720.jpg",
+        }
+      }
+      key="5"
+    />
+    <ImageCard
+      handleDelete={[Function]}
+      handleEdit={[Function]}
+      image1={
+        Object {
+          "id": "6",
+          "name": "Forest6",
+          "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbbQr8RYShw7zga6H2q9kTF78VpUMq22VGA&usqp=CAU",
+        }
+      }
+      key="6"
+    />
   </div>
 </div>
 `;

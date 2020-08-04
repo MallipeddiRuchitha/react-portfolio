@@ -3,7 +3,7 @@
 exports[`Image component Matches the snapshot 1`] = `
 <div
   className="makeStyles-styleImage-1"
-  data-testid="image"
+  id="image"
 >
   <div
     className="makeStyles-picture-2"

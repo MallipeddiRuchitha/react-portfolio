@@ -34,7 +34,7 @@ const Header = () => {
   let auth=new Auth();
   return (
     <>
-      <div className={classes.styleHeader} data-testid="header">
+      <div className={classes.styleHeader} id="header">
         <Link to="/home" className={classes.link}>
           <HeaderElement text={Constants.HOME}></HeaderElement>
         </Link>

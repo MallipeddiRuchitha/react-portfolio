@@ -1,36 +1,37 @@
 import React from 'react';
-import { create } from "react-test-renderer";
-import { render, fireEvent, getByRole } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import { shallow ,mount} from 'enzyme';
 import Button from './_button';
-
+import '../../../setupTests'
 describe("Button component",() =>{
     test("Matches the snapshot",() => {
-        const button = create(<Button />);
-        expect(button.toJSON()).toMatchSnapshot();
+        const button = shallow(<Button />);
+        expect(button).toMatchSnapshot();
 
     })
     test("button element is rendered",() => {
-        const { getByTestId, getByText } = render(<Button />);
-        expect(getByTestId("button")).toBeInTheDocument();
+        const wrapper = shallow(<Button />);
+        expect(wrapper.find('#button').exists()).toEqual(true);
         
     });
     test("button element is enabled",() => {
-        const { getByTestId, getByText } = render(<Button value="save" disabled={false}/>);
-        expect(getByTestId("button")).toBeEnabled();
+        const wrapper =shallow(<Button value="save" disabled={false}/>);
+        expect(wrapper.find("#button").props()['disabled']).toBe(false)
         
     });
     test("button element is disabled",() => {
-        const { getByTestId, getByText } = render(<Button value="save" disabled={true}/>);
-        expect(getByTestId("button")).toBeDisabled();
+        const wrapper =shallow(<Button value="save" disabled={true}/>);
+        expect(wrapper.find("#button").props()['disabled']).toBe(true)
         
     });
    
     test("on click of button",() => {
         const mockOnClick = jest.fn();
-        const { getByTestId, getByText,getByRole } = render(<Button value="save" disabled={false} onClick={mockOnClick}/>);
-        expect(getByTestId("button")).toBeEnabled();
-        fireEvent.click(getByRole("button"));
+        const wrapper =mount(<Button value="save" disabled={false} onClick={mockOnClick} />);
+        //console.log(wrapper.debug());
+        const button=wrapper.find("#button").last();
+        button.simulate('click');
+        wrapper.unmount();
+        //fireEvent.click(getByRole("button"));
         expect(mockOnClick).toHaveBeenCalledTimes(1);
     });
 });
