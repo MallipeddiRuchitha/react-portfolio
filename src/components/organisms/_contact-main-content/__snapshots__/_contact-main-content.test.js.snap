@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactMainContent component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleContactMainContent-1"
+  id="contact"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-heading-4"
+    variant="h3"
+  >
+    connect with me
+  </WithStyles(ForwardRef(Typography))>
+  <div
+    className="makeStyles-forms-2"
+  >
+    <form>
+      <div
+        className="makeStyles-input-3"
+      >
+        <Input
+          label="Name"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-error-5"
+      />
+      <div
+        className="makeStyles-input-3"
+      >
+        <Input
+          label="Email"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-error-5"
+        id="emailError"
+      />
+      <div
+        className="makeStyles-input-3"
+      >
+        <Input
+          label="Message"
+          onChange={[Function]}
+          value=""
+        />
+      </div>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-error-5"
+      />
+      <CustomButton
+        disabled={true}
+        onClick={[Function]}
+        value="submit"
+      />
+    </form>
+  </div>
+</div>
+`;

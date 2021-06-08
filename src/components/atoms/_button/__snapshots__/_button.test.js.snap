@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-button-1"
+>
+  <WithStyles(ForwardRef(Button))
+    color="primary"
+    id="button"
+    variant="contained"
+  >
+    <WithStyles(ForwardRef(Typography))
+      variant="button"
+    >
+       
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutCard component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-list-1"
+  id="aboutCard"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-heading-2"
+    variant="subtitle1"
+  >
+    Technical Skills
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))>
+    Spring
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))>
+    React
+  </WithStyles(ForwardRef(Typography))>
+</div>
+`;

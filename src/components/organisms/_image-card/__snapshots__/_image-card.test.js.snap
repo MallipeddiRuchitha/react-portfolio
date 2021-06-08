@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageCard component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleImageCard-1"
+  id="imagecard"
+>
+  <div
+    className="makeStyles-picture-2"
+  >
+    <Image
+      image="https://www.birmingham.ac.uk/Images/News/Forest-900.jpg"
+    />
+  </div>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-name-3"
+  >
+    image
+  </WithStyles(ForwardRef(Typography))>
+  <div
+    className="makeStyles-icons-5"
+  >
+    <EditIcon
+      className="makeStyles-edit-4"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    />
+    <DeleteIcon
+      id="deleteIcon"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    />
+  </div>
+</div>
+`;

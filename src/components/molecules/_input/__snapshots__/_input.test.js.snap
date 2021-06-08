@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component Matches the snapshot 1`] = `
+<div
+  id="input"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h5"
+  >
+    name
+  </WithStyles(ForwardRef(Typography))>
+  <InputField
+    onChange={[MockFunction]}
+    test="name"
+    value=""
+  />
+</div>
+`;

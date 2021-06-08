@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditImageForm component Matches the snapshot 1`] = `
+<form
+  className="makeStyles-form-1"
+  id="editImageForm"
+>
+  <InputField
+    className="makeStyles-name-2"
+    style={
+      Object {
+        "color": "#ffffff",
+      }
+    }
+    test="Name"
+    value="image1"
+  />
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-error-3"
+  />
+  <CustomButton
+    disabled={false}
+    style={
+      Object {
+        "marginLeft": "-10px",
+      }
+    }
+    value="save"
+  />
+</form>
+`;

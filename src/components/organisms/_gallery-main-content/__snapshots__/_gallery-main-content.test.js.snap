@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GalleryMain component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleGalleryMainContent-1"
+  id="galleryMain"
+>
+  <div
+    className="makeStyles-styleGrid-2"
+  >
+    <Image
+      image="https://www.birmingham.ac.uk/Images/News/Forest-900.jpg"
+      key="1"
+    />
+    <Image
+      image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIWGOJcO5wb_qh4welWgFUgsZPHXMetI-iVg&usqp=CAU"
+      key="2"
+    />
+    <Image
+      image="https://miro.medium.com/max/8576/0*zBu6EBAwjXXXHz-z"
+      key="3"
+    />
+    <Image
+      image="https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg"
+      key="4"
+    />
+    <Image
+      image="https://www.orfonline.org/wp-content/uploads/2020/03/India-forests-1280x720.jpg"
+      key="5"
+    />
+    <Image
+      image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfbbQr8RYShw7zga6H2q9kTF78VpUMq22VGA&usqp=CAU"
+      key="6"
+    />
+  </div>
+</div>
+`;

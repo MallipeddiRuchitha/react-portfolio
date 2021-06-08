@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-aboutMainContent-1"
+  id="aboutMainContent"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-about-2"
+    variant="subtitle2"
+  >
+     I am Ruchitha from Keshav Memorial Institute of Technology.I'm passionate about coding and learning new technologies.In free time I like to chill at home watching movies and colouring .I love to be surrounded by positive and motivating people. 
+  </WithStyles(ForwardRef(Typography))>
+  <div
+    className="makeStyles-list-4"
+  >
+    <AboutCard
+      array={
+        Array [
+          "Java",
+          "DBMS",
+          "React",
+          "Spring",
+          "Spring boot",
+          "REST",
+          "Networking",
+          "Linux",
+          "HTML,CSS",
+        ]
+      }
+      heading="Technical Skills"
+    />
+    <AboutCard
+      array={
+        Array [
+          "Detection and Prediction of Clouds",
+          "Gate Pass Management System",
+          "Making Data Based Decisions Using Google Analytics",
+          "Online Doctor Appointment",
+          "Spring boot REST API which gives information about movies and associated actors",
+          "Spring boot application which gives information about courses and related topics",
+        ]
+      }
+      heading="Projects"
+    />
+  </div>
+</div>
+`;

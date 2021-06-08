@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddImageForm component Matches the snapshot 1`] = `
+<div
+  id="addImageForm"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-heading-3"
+    variant="h3"
+  >
+    Add Image
+  </WithStyles(ForwardRef(Typography))>
+  <form
+    className="makeStyles-form-1"
+  >
+    <div
+      className="makeStyles-input-2"
+    >
+      <Input
+        label="Name"
+        value=""
+      />
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-error-4"
+      />
+    </div>
+    <div
+      className="makeStyles-input-2"
+    >
+      <Input
+        label="Url"
+        value=""
+      />
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-error-4"
+      />
+    </div>
+    <CustomButton
+      disabled={false}
+      style={
+        Object {
+          "margin": "20px 50%",
+        }
+      }
+      value="Add"
+    />
+  </form>
+</div>
+`;

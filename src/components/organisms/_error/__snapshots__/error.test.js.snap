@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error component Matches the snapshot 1`] = `
+<div
+  className="makeStyles-styleError-3"
+  id="error"
+>
+  <WithStyles(ForwardRef(Typography))
+    className="makeStyles-inputError-1"
+    variant="h3"
+  >
+    You have to login first
+  </WithStyles(ForwardRef(Typography))>
+  <a
+    className="makeStyles-link-2"
+    href="/"
+    id="link"
+  >
+     
+    Back to login page
+  </a>
+</div>
+`;
